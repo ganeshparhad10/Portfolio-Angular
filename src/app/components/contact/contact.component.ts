@@ -21,7 +21,7 @@ export class ContactComponent {
       },
       error: (err) => {
         console.error('Error:', err);
-        alert('Submission failed. Please try again later.');
+        alert('Submission failed. Backend Server Temporarily Closed".');
       },
     });
   }

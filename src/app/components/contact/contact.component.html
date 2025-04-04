@@ -1,0 +1,52 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+
+<div class="contact-section">
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 fw-bold text-danger">Contact </h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+
+              <!-- Name Field -->
+              <div class="mb-3">
+                <label for="name" class="form-label fw-semibold">Full Name</label>
+                <input type="text" id="name" class="form-control rounded-3" [(ngModel)]="contact.name" name="name" required placeholder="Enter your name">
+              </div>
+
+              <!-- Email Field -->
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Email Address</label>
+                <input type="email" id="email" class="form-control rounded-3" [(ngModel)]="contact.email" name="email" required placeholder="Enter your email">
+              </div>
+
+              <!-- Phone Field -->
+              <div class="mb-3">
+                <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" id="phone" class="form-control rounded-3" [(ngModel)]="contact.phone" name="phone" required placeholder="Enter your phone number">
+              </div>
+
+              <!-- Message Field -->
+              <div class="mb-3">
+                <label for="message" class="form-label fw-semibold">Message</label>
+                <textarea id="message" class="form-control rounded-3" rows="4" [(ngModel)]="contact.message" name="message" required placeholder="Write your message here"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary w-100 py-2 fw-bold shadow-sm" [disabled]="!contactForm.form.valid">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+/* header.component.css */
+.header {
+  background: #FFFFFF;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(232, 94, 94, 0.3);
+  font-family: "Sofia", sans-serif;
+  font-size: 10px;
+  text-shadow: 3px 3px 3px #ababab;
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Stick it to the top of the viewport */
+  left: 0;
+  width: 100%; /* Make it full width */
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  }
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-family: urbanist, sans-serif;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: #272726f6; /* Changed to white for better contrast against gradient */
+}
+
+.logo .tagline {
+  margin: 5px 0 0;
+  font-size: 15px;
+  color: #040000; /* Changed to white for better contrast */
+  font-weight: 400;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  font-size: 23px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  color: rgb(28, 28, 31); /* Black color for links */
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #72e28c; /* Bright green on hover */
+}

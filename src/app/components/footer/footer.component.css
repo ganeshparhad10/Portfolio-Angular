@@ -1,0 +1,122 @@
+/* Footer container */
+.footer {
+  background: url('src/assets/bgfooterwave.svg') no-repeat center center,
+              linear-gradient(#0a0909, #010212);
+  background-size: cover; /* Ensures the background image covers the entire footer */
+  color: #f3f2f7;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%; /* Make it full width */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; /* Adjust weight based on preference */
+
+  /* Apply text shadow */
+  text-shadow: 2px 2px 5px rgba(9, 9, 9, 0.7);
+}
+
+
+/* Grid layout for the footer */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  /* 4 equal columns */
+  gap: 10px; /* Space between grid items */
+  justify-items: center; /* Center the content in each grid cell */
+  align-items: start; /* Align the items to the top of each grid cell */
+  padding: 0 20px;
+}
+
+/* Footer sections */
+.footer-section {
+  margin: 10px 0;
+}
+
+.footer-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  text-decoration: none;
+}
+
+/* Social links section styling */
+.social-links {
+  display: grid; /* Display links in grid format */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Makes links responsive, fills space */
+  gap: 12px;  /* Minimum gap between links */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-items: center; /* Centers the links within the grid cells */
+}
+
+/* Social links items */
+.social-links li {
+  display: inline; /* Links are displayed inline */
+}
+
+/* Social links anchor styling */
+.social-links a {
+  color: #8d2828;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.social-links a:hover {
+  color: #2ae433;
+}
+
+.services {
+  display: grid; /* Display links in grid format */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Makes links responsive, fills space */
+  gap: 12px;  /* Minimum gap between links */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-items: center; /* Centers the links within the grid cells */
+}
+
+/* Date section styling */
+.date-container {
+  display: flex;
+  align-items: center;
+  color: #090028;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: fit-content;
+}
+
+.date-text {
+  margin-right: 20px;
+  color: white;
+}
+
+.date-text h3 {
+  margin: 5px 0;
+  font-size: large;
+  font-weight: normal;
+}
+
+/* Style the hr tag */
+hr {
+  border: 0; /* Remove the default border */
+  height: 1px; /* Set the height of the line */
+  background-color: rgb(244, 233, 233); /* Set the color of the line */
+  margin: 20px 50px; /* Add gap from the left and right */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;  /* 1 column for small screens */
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Adjust weight based on preference */
+  }
+}

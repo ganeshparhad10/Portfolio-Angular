@@ -1,0 +1,82 @@
+  .dashboard {
+    background: url('src/assets/download.svg') no-repeat center center,
+                linear-gradient(rgba(238, 233, 233, 0.8),rgba(80, 5, 5, 0));
+    background-size: cover;
+    color: #0a0909;
+    padding: 50px;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px 5px #555;
+  }
+
+  .dash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .text h1, .text h2 {
+    margin: 5px 0; /* Reduce gap */
+    line-height: 1.2; /* Adjusts line height */
+  }
+
+  .tagline {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #040000; /* Changed to white for better contrast */
+    font-weight: 400;
+  }
+  .text {
+    flex: 1;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .code {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+  }
+
+  .code img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* 🔥 Fade-in Animation */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Applying Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeUp 1s ease-in-out forwards;
+  }
+
+  .delay-1 { animation-delay: 0.5s; }
+  .delay-2 { animation-delay: 1s; }
+  .delay-3 { animation-delay: 1.5s; }
+
+  /* Quote Styling */
+  .quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+  }

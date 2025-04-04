@@ -1,0 +1,59 @@
+<!-- app.component.html -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer with Date and Time</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Date and Time Section -->
+      <div class="footer-section date-section">
+        <div class="date-container">
+
+          <div class="date-text">
+            <h2>Date and Time</h2>
+
+            <h3>{{ currentDate }}</h3>
+            <h3>{{ currentTime }}</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="footer-section contact">
+        <h3>Contact</h3>
+        <p><a href="mailto:ganeshparhad42@gmail.com"><i class="fab fa-google"></i> ganeshparhad42@gmail.com</a></p>
+        <p><i class="fas fa-phone-alt"></i> +91 8421028276</p>
+        <p><i class="fas fa-map-marker-alt"></i> HariOm Nagar Near Renuka Petrol Pump<br>
+          Chikhli, Bildhana, Maharashtra, India.
+        </p>
+      </div>
+
+      <!-- Social Section -->
+      <div class="footer-section social">
+        <h3>Social</h3>
+        <ul class="social-links">
+          <li><a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/ganeshparhad10" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://youtube.com/channel/UCeey0E1RH-ey994Jy7nqNYg" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Section -->
+      <div class="footer-section service">
+        <h3>Services</h3>
+        <ul class="services">
+          <li>Java Developer</li>
+          <li>Full-Stack Developer</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-section-copyright">
+      <p>© 2025 Developed by Ganesh Parhad. All rights reserved.</p>
+    </div>
+  </footer>
+

@@ -1,0 +1,36 @@
+.Devicon  {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;  /* 3 equal columns */
+  gap: 50px; /* Space between grid items */
+  justify-items: center; /* Center the content in each grid cell */
+  align-items: start; /* Align the items to the top of each grid cell */
+  padding: 20 20px;
+  /* background: linear-gradient(to right, #ed48e4, #50b2a7, #372f17, #335186,#acf54f) Dark background for contrast */
+}
+.color{
+  background-color: rgba(234, 219, 143, 0.845);
+  text-align: center;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+    font-weight: bold;
+}
+.Devicon img,
+.Devicon i {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  font-size: 60px; /* Ensures icons scale properly */
+  color: white; /* Color for non-image icons */
+  transition: transform 0.3s ease-in-out;
+}
+
+.Devicon img:hover,
+.Devicon i:hover {
+  transform: scale(1.2); /* Hover effect for icons */
+}
+.skk{
+  margin-top: 10px;
+}

@@ -1,0 +1,49 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  background-size: cover;
+  background-color: linear-gradient(rgba(76, 43, 43, 0.8),rgba(5, 9, 4, 0));;
+  height: 50vh;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures perfect circle without distortion */
+  border: 5px solid #210202;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* About Me Text */
+.about-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: oblique;
+}
+
+/* Future Content Section */
+.future {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: oblique;
+}
+
+/* Reduce gap between image and text */
+.row.align-items-center {
+  margin-bottom: 20px;
+}
+
+/* Center align buttons in Education section */
+.education-buttons {
+  text-align: center;
+}
+
+/* Add some margin between buttons */
+.education-buttons a {
+  margin: 5px;
+}

@@ -1,5 +1,5 @@
   .dashboard {
-    background: url('src/assets/download.svg') no-repeat center center,
+    background: url('/assets/download.svg') no-repeat center center,
                 linear-gradient(rgba(238, 233, 233, 0.8),rgba(80, 5, 5, 0));
     background-size: cover;
     color: #0a0909;

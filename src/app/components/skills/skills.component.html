@@ -14,12 +14,12 @@
 
     <div class="skills-grid">
       <div *ngFor="let category of skillCategories" class="skills-group cad-corner-marks card-clean">
-        <div class="group-header flex items-center justify-between pb-3 mb-4 border-b border-white/10">
-          <div class="flex items-center gap-2.5">
-            <i [class]="category.icon" class="group-icon text-cyan-400 fs-5"></i>
-            <h2 class="group-title font-mono text-xs uppercase tracking-wider text-white font-bold">{{ category.title }}</h2>
+        <div class="group-header">
+          <div class="group-title-wrap">
+            <i [class]="category.icon" class="group-icon"></i>
+            <h2 class="group-title">{{ category.title }}</h2>
           </div>
-          <span class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">VERIFIED</span>
+          <span class="group-badge">VERIFIED</span>
         </div>
 
         <div class="skills-pill-wrap">

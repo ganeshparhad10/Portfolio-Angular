@@ -18,6 +18,58 @@
   background: #141416;
 }
 
+/* Category Header: Icon & Title Blueprint Alignment */
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.group-icon {
+  font-size: 1.25rem;
+  color: #22d3ee;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.group-title {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+}
+
+.group-badge {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 10px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+
 .skills-pill-wrap {
   display: flex;
   flex-wrap: wrap;

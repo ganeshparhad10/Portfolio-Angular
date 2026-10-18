@@ -16,7 +16,7 @@
 
 @media (min-width: 1024px) {
   .hero-grid {
-    grid-template-columns: 1.25fr 0.75fr;
+    grid-template-columns: 1.3fr 0.7fr;
     gap: 40px;
   }
 }
@@ -41,7 +41,7 @@
   margin-bottom: 18px;
 }
 
-/* Portrait Card Styling with Reduced Length */
+/* Portrait Card Styling with Natural Fit */
 .hero-portrait-col {
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@
 
 .hero-portrait-card {
   width: 100%;
-  max-width: 290px; /* Compact width */
+  max-width: 260px; /* Small, compact card width */
   position: relative;
 }
 
@@ -127,20 +127,23 @@
   color: #6b7280;
 }
 
-/* Reduced length image frame */
+/* Photo frame matching passport photo proportions (full face visible, zero cropping) */
 .hero-portrait-frame {
   position: relative;
   overflow: hidden;
-  height: 230px; /* Reduced vertical length / height */
+  width: 100%;
+  aspect-ratio: 413 / 531;
   background: #0A0A0B;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-portrait-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
   display: block;
 }
 

@@ -1,24 +1,31 @@
-<div class="skills-page">
+<div class="skills-page bg-[#0A0A0B] bg-artistic-grid py-12">
   <div class="section-container">
-    <div class="section-header">
-      <span class="section-label">Competencies</span>
-      <h1 class="section-title">Technical Skills</h1>
-      <p class="section-subtitle">
-        Languages, enterprise frameworks, database technologies, and developer tooling used across my projects.
+    <div class="section-header mb-10">
+      <span class="section-label font-mono text-cyan-400 text-xs uppercase tracking-widest font-bold">
+        CORE COMPETENCIES & TOOLING
+      </span>
+      <h1 class="section-title font-tech-heading text-3xl sm:text-4xl text-white uppercase tracking-wider font-bold mt-1">
+        Technical Skills & Ecosystem
+      </h1>
+      <p class="section-subtitle text-gray-400 text-sm sm:text-base leading-relaxed font-light mt-2 max-w-2xl">
+        Backend languages, enterprise microservices frameworks, database technologies, and AI integrations utilized across production workflows.
       </p>
     </div>
 
     <div class="skills-grid">
-      <div *ngFor="let category of skillCategories" class="skills-group card-clean">
-        <div class="group-header">
-          <i [class]="category.icon" class="group-icon"></i>
-          <h2 class="group-title">{{ category.title }}</h2>
+      <div *ngFor="let category of skillCategories" class="skills-group cad-corner-marks card-clean">
+        <div class="group-header flex items-center justify-between pb-3 mb-4 border-b border-white/10">
+          <div class="flex items-center gap-2.5">
+            <i [class]="category.icon" class="group-icon text-cyan-400 fs-5"></i>
+            <h2 class="group-title font-mono text-xs uppercase tracking-wider text-white font-bold">{{ category.title }}</h2>
+          </div>
+          <span class="text-[10px] font-mono text-gray-500 uppercase tracking-widest">VERIFIED</span>
         </div>
 
         <div class="skills-pill-wrap">
           <div *ngFor="let skill of category.skills" class="skill-chip">
-            <i [class]="skill.iconClass" class="skill-icon"></i>
-            <span class="skill-name">{{ skill.name }}</span>
+            <i [class]="skill.iconClass" class="skill-icon text-cyan-400"></i>
+            <span class="skill-name font-mono text-xs">{{ skill.name }}</span>
           </div>
         </div>
       </div>

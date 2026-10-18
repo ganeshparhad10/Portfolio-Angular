@@ -143,40 +143,81 @@ a:hover {
   line-height: 1.6;
 }
 
-/* Clean Cards */
+/* Blueprint Technical Cards & Box Borders */
 .card-clean {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
+  border-radius: 2px;
+  position: relative;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-card);
 }
 
 .card-clean:hover {
-  border-color: #334155;
+  border-color: rgba(6, 182, 212, 0.6);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.12), var(--shadow-card-hover);
 }
 
-/* Refined Buttons */
+/* Technical CAD Corner Marks */
+.cad-corner-marks {
+  position: relative;
+}
+
+.cad-corner-marks::before {
+  content: "";
+  pointer-events: none;
+  border-top: 2px solid #06b6d4;
+  border-left: 2px solid #06b6d4;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 2;
+}
+
+.cad-corner-marks::after {
+  content: "";
+  pointer-events: none;
+  border-bottom: 2px solid #06b6d4;
+  border-right: 2px solid #06b6d4;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  z-index: 2;
+}
+
+/* Blueprint Buttons */
 .btn-primary-clean {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--accent-blue);
-  color: #ffffff !important;
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 1px solid var(--accent-blue);
+  background: #06b6d4;
+  color: #000000 !important;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 2px;
+  border: 1px solid #22d3ee;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 0 14px rgba(6, 182, 212, 0.25);
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .btn-primary-clean:hover {
-  background: var(--accent-blue-hover);
+  background: #22d3ee;
+  border-color: #22d3ee;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
   transform: translateY(-1px);
+  color: #000000 !important;
 }
 
 .btn-secondary-clean {
@@ -184,37 +225,48 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text-main) !important;
-  font-weight: 500;
-  font-size: 0.92rem;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 1px solid var(--border-subtle);
+  background: #141416;
+  color: #ffffff !important;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .btn-secondary-clean:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #475569;
-  color: #ffffff !important;
+  background: #1a1a1e;
+  border-color: #06b6d4;
+  color: #22d3ee !important;
+  box-shadow: 0 0 16px rgba(6, 182, 212, 0.2);
   transform: translateY(-1px);
 }
 
-/* Minimalist Tech Badges */
+/* Technical Blueprint Badges */
 .badge-clean {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: #141416;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-secondary);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
   padding: 4px 10px;
-  border-radius: 6px;
-  font-family: var(--font-sans);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.badge-clean:hover {
+  border-color: rgba(6, 182, 212, 0.5);
+  color: #ffffff;
 }
 
 /* Layout Offset */

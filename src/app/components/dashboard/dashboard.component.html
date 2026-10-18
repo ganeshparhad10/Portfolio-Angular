@@ -1,77 +1,114 @@
-<section class="hero-section">
+<section class="hero-section bg-[#0A0A0B] bg-artistic-grid">
   <div class="section-container">
     <div class="hero-grid">
       <!-- Left: Narrative -->
       <div class="hero-narrative">
-        <span class="section-label">Software Engineer & Java Specialist</span>
+        <div class="hero-status-pill inline-flex items-center gap-2 px-3 py-1 bg-[#141416] border border-white/10 font-mono text-xs text-cyan-400 font-semibold mb-4 w-fit">
+          <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+          <span>AVAILABLE FOR FULL-TIME ROLES // JAVA BACKEND</span>
+        </div>
 
-        <h1 class="hero-name">
+        <h1 class="hero-name font-tech-heading text-4xl sm:text-5xl md:text-6xl text-white font-black uppercase tracking-wider">
           Ganesh Parhad
         </h1>
 
-        <p class="hero-lead">
-          I build robust backend architectures, Spring Boot microservices, and modern AI-powered applications.
+        <p class="hero-lead font-tech-heading text-lg sm:text-xl text-cyan-400 font-bold tracking-wide">
+          Java Backend Developer • Spring Boot & Microservices Specialist • Full-Stack Engineer
         </p>
 
-        <p class="hero-bio">
-          CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence & Data Science.
-          Specialized in developing resilient RESTful APIs, implementing role-based security with JWT,
-          and building full-stack platforms using Java, Spring Boot, MySQL, and modern frontends.
+        <p class="hero-bio text-gray-300 text-sm sm:text-base leading-relaxed font-light">
+          CDAC PG-DAC graduate (74.68%) with a B.Tech in Artificial Intelligence & Data Science (7.88 CGPA).
+          Specialized in architecting high-throughput RESTful APIs, securing microservices with JWT & Spring Security, 
+          managing relational schemas with MySQL, and integrating Generative AI (Gemini API) into enterprise platforms.
         </p>
 
-        <!-- Understated Tech Chips -->
-        <div class="hero-tags">
-          <span class="badge-clean"><i class="devicon-java-plain"></i> Core Java</span>
-          <span class="badge-clean"><i class="devicon-spring-plain"></i> Spring Boot</span>
-          <span class="badge-clean"><i class="bi bi-diagram-3"></i> Microservices</span>
-          <span class="badge-clean"><i class="bi bi-shield-check"></i> Spring Security</span>
-          <span class="badge-clean"><i class="devicon-mysql-original"></i> MySQL</span>
-          <span class="badge-clean"><i class="devicon-react-original"></i> React.js / Angular</span>
-          <span class="badge-clean"><i class="bi bi-stars"></i> Gemini AI</span>
+        <!-- Technical Blueprint Badges -->
+        <div class="hero-tags flex flex-wrap gap-2 my-4">
+          <span class="badge-clean"><i class="devicon-java-plain text-cyan-400"></i> Core Java</span>
+          <span class="badge-clean"><i class="devicon-spring-plain text-cyan-400"></i> Spring Boot</span>
+          <span class="badge-clean"><i class="bi bi-diagram-3 text-cyan-400"></i> Microservices</span>
+          <span class="badge-clean"><i class="bi bi-shield-check text-cyan-400"></i> Spring Security / JWT</span>
+          <span class="badge-clean"><i class="devicon-mysql-original text-cyan-400"></i> MySQL & JPA</span>
+          <span class="badge-clean"><i class="devicon-react-original text-cyan-400"></i> React.js</span>
+          <span class="badge-clean"><i class="bi bi-stars text-cyan-400"></i> Gemini AI</span>
         </div>
 
         <!-- Action Links -->
-        <div class="hero-actions">
+        <div class="hero-actions flex flex-wrap gap-3 mt-2 mb-6">
           <a routerLink="/projects" class="btn-primary-clean">
             <i class="bi bi-folder2-open"></i>
             <span>View Projects</span>
           </a>
           <a routerLink="/resume" class="btn-secondary-clean">
-            <i class="bi bi-file-earmark-text"></i>
-            <span>Read Resume</span>
+            <i class="bi bi-file-earmark-code text-cyan-400"></i>
+            <span>View Official CV</span>
           </a>
-          <a routerLink="/contact" class="btn-secondary-clean">
-            <i class="bi bi-envelope"></i>
-            <span>Get in Touch</span>
+          <a
+            href="assets/Ganesh-Parhad.pdf"
+            download="Ganesh_Parhad_Resume.pdf"
+            class="btn-secondary-clean">
+            <i class="bi bi-download text-cyan-400"></i>
+            <span>Download PDF</span>
           </a>
         </div>
 
         <!-- Social Connections -->
-        <div class="hero-social">
-          <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="bi bi-github"></i>
+        <div class="hero-social flex items-center gap-4 text-xs font-mono text-gray-400">
+          <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" class="social-link hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="bi bi-github text-white"></i>
             <span>GitHub</span>
           </a>
-          <span class="social-sep">•</span>
-          <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="bi bi-linkedin"></i>
+          <span class="text-gray-600">•</span>
+          <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a" target="_blank" rel="noopener noreferrer" class="social-link hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="bi bi-linkedin text-cyan-400"></i>
             <span>LinkedIn</span>
           </a>
-          <span class="social-sep">•</span>
-          <a href="mailto:ganeshparhad42@gmail.com" class="social-link">
-            <i class="bi bi-envelope-fill"></i>
+          <span class="text-gray-600">•</span>
+          <a href="mailto:ganeshparhad42@gmail.com" class="social-link hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <i class="bi bi-envelope text-white"></i>
             <span>Email</span>
           </a>
         </div>
       </div>
 
-      <!-- Right: Portrait -->
-      <div class="hero-portrait-col">
-        <div class="portrait-card">
-          <img src="assets/passport.jpg" alt="Ganesh Parhad" class="portrait-image">
-          <div class="portrait-meta">
-            <span class="portrait-name">Ganesh Bhaskar Parhad</span>
-            <span class="portrait-loc"><i class="bi bi-geo-alt"></i> Maharashtra, India</span>
+      <!-- Right: Portrait with 4-Corner Blueprint Marks -->
+      <div class="hero-portrait-col flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-sm sm:max-w-md">
+          <div class="relative p-3.5 sm:p-4 bg-[#141416] border border-white/10 shadow-2xl">
+            <!-- 4 Corner Cyan Marks (matching abhishek-g reference) -->
+            <div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cyan-500"></div>
+            <div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cyan-500"></div>
+            <div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cyan-500"></div>
+            <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cyan-500"></div>
+
+            <!-- Top Header Inside Card -->
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/10 font-mono text-[10px] text-gray-400 uppercase tracking-widest">
+              <span class="flex items-center gap-1.5 text-cyan-400 font-bold">
+                <i class="bi bi-shield-check"></i> VERIFIED PROFILE // GANESH PARHAD
+              </span>
+              <span class="text-gray-500 font-mono">STATUS: ACTIVE</span>
+            </div>
+
+            <!-- Portrait Photo -->
+            <div class="relative overflow-hidden border border-white/10 bg-[#0A0A0B]">
+              <img src="assets/passport.jpg" alt="Ganesh Bhaskar Parhad" class="w-full h-72 sm:h-80 object-cover object-top">
+            </div>
+
+            <!-- Bottom Metadata Box -->
+            <div class="mt-3 p-3 bg-[#0A0A0B] border border-white/10 font-mono text-xs">
+              <div class="flex items-center justify-between text-white font-bold mb-1">
+                <span class="font-tech-heading text-sm tracking-wider uppercase">GANESH BHASKAR PARHAD</span>
+                <span class="text-cyan-400 font-mono text-[11px]">CDAC PG-DAC</span>
+              </div>
+              <div class="text-gray-400 text-[11px] font-light">Java Backend & Microservices Engineer</div>
+              <div class="text-gray-500 text-[10px] mt-1.5 pt-1.5 border-t border-white/10 flex items-center justify-between">
+                <span class="flex items-center gap-1">
+                  <i class="bi bi-geo-alt text-cyan-400"></i> Maharashtra, India
+                </span>
+                <span class="text-cyan-400 font-bold">B.Tech AI & Data Science</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

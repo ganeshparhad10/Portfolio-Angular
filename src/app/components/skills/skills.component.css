@@ -1,72 +1,53 @@
+/* ==========================================================================
+   Skills Blueprint Styles (abhishek-g-mu.vercel.app aesthetic)
+   ========================================================================== */
+
 .skills-page {
   background: var(--bg-body);
-  padding: 40px 0 100px;
+  min-height: calc(100vh - 70px);
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 
 .skills-group {
-  padding: 28px;
-}
-
-.group-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.group-icon {
-  font-size: 1.25rem;
-  color: var(--accent-blue);
-}
-
-.group-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin: 0;
-  letter-spacing: -0.01em;
+  padding: 24px;
+  background: #141416;
 }
 
 .skills-pill-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .skill-chip {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 8px 12px;
+  background: #0A0A0B;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: 7px 12px;
   transition: all 0.15s ease;
 }
 
 .skill-chip:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #334155;
+  background: #101012;
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
   transform: translateY(-1px);
 }
 
 .skill-icon {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
 }
 
 .skill-name {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  color: #e5e7eb;
 }
-

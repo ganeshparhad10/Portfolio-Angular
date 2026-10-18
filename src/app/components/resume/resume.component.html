@@ -49,8 +49,14 @@
       </div>
     </div>
 
-    <!-- DOCUMENT VIEW: Styled matching abhishek-g-mu.vercel.app -->
-    <div *ngIf="viewMode === 'sheet'" class="resume-container-outer bg-[#141416] border border-cyan-500/80 p-3 sm:p-6 md:p-8 shadow-2xl">
+    <!-- DOCUMENT VIEW: Styled matching abhishek-g-mu.vercel.app with 4 corner marks -->
+    <div *ngIf="viewMode === 'sheet'" class="resume-container-outer bg-[#141416] border border-cyan-500/80 p-3 sm:p-6 md:p-8 shadow-2xl relative">
+      <!-- 4 Corner Cyan Marks (Blueprint Framing) -->
+      <div class="absolute -top-1.5 -left-1.5 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-500 pointer-events-none"></div>
+      <div class="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-500 pointer-events-none"></div>
+      <div class="absolute -bottom-1.5 -left-1.5 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-500 pointer-events-none"></div>
+      <div class="absolute -bottom-1.5 -right-1.5 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-500 pointer-events-none"></div>
+
       <div class="resume-sheet bg-[#0A0A0B] p-4 sm:p-6 md:p-8 lg:p-10 border border-white/10 font-sans space-y-6 text-gray-300">
         
         <!-- Sheet Header with Photo & Contacts -->
@@ -123,7 +129,7 @@
           </h2>
           <div class="space-y-3 font-mono text-xs">
             <!-- CDAC -->
-            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10 cad-corner-marks">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1 gap-1">
                 <span class="text-sm">CDAC (KNOW IT) — PUNE, INDIA</span>
                 <span class="text-cyan-400 font-bold text-xs">2026</span>
@@ -137,7 +143,7 @@
             </div>
 
             <!-- B.Tech -->
-            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10 cad-corner-marks">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1 gap-1">
                 <span class="text-sm">CSMSS CHH. SHAHU COLLEGE OF ENGINEERING — AURANGABAD</span>
                 <span class="text-cyan-400 font-bold text-xs">2021 – 2025</span>
@@ -151,7 +157,7 @@
             </div>
 
             <!-- HSC -->
-            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10 cad-corner-marks">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1 gap-1">
                 <span class="text-sm">JANATA MAHAVIDYALAYA — CHANDRAPUR</span>
                 <span class="text-cyan-400 font-bold text-xs">2021</span>
@@ -172,32 +178,32 @@
             TECHNICAL SKILLS & WORKFLOWS
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
-            <div class="p-3 bg-[#141416] border border-white/10">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks">
               <span class="text-cyan-400 font-semibold block mb-1">PROGRAMMING LANGUAGES</span>
               <span class="text-gray-300 font-light leading-relaxed">Java, SQL, JavaScript, Python</span>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks">
               <span class="text-cyan-400 font-semibold block mb-1">JAVA TECHNOLOGIES</span>
               <span class="text-gray-300 font-light leading-relaxed">Core Java, Spring, Spring Boot, Spring Security, Hibernate, JPA</span>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks">
               <span class="text-cyan-400 font-semibold block mb-1">DATABASE SYSTEMS</span>
               <span class="text-gray-300 font-light leading-relaxed">MySQL, Relational DBMS, Schema Design, SQL Queries</span>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks">
               <span class="text-cyan-400 font-semibold block mb-1">FRONTEND TECHNOLOGIES</span>
               <span class="text-gray-300 font-light leading-relaxed">HTML5, CSS3, JavaScript, React.js, Angular, Bootstrap</span>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks">
               <span class="text-cyan-400 font-semibold block mb-1">AI & INTEGRATIONS</span>
               <span class="text-gray-300 font-light leading-relaxed">Google Gemini API, Generative AI, Natural Language Processing</span>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks">
               <span class="text-cyan-400 font-semibold block mb-1">TOOLS & PLATFORMS</span>
               <span class="text-gray-300 font-light leading-relaxed">Git, GitHub, Maven, Postman, VS Code, Spring Tool Suite</span>
             </div>
@@ -211,7 +217,7 @@
           </h2>
           <div class="space-y-4 text-xs font-mono">
             <!-- Project 1: WorkPlus -->
-            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10 cad-corner-marks">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1.5 gap-1">
                 <span class="text-sm">WorkPlus – Workforce Management Platform</span>
                 <span class="text-cyan-400 font-normal text-[11px] px-2 py-0.5 bg-[#0A0A0B] border border-white/10 w-fit">
@@ -250,7 +256,7 @@
             </div>
 
             <!-- Project 2: EduTrack -->
-            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10 cad-corner-marks">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1.5 gap-1">
                 <span class="text-sm">EduTrack: Education-Focused Attendance Tracker</span>
                 <span class="text-cyan-400 font-normal text-[11px] px-2 py-0.5 bg-[#0A0A0B] border border-white/10 w-fit">
@@ -288,7 +294,7 @@
             CERTIFICATIONS
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
-            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks flex items-start gap-3">
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
               <div>
                 <strong class="text-white block font-bold">NPTEL Programming in Java</strong>
@@ -296,7 +302,7 @@
               </div>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks flex items-start gap-3">
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
               <div>
                 <strong class="text-white block font-bold">Fundamentals of Deep Learning</strong>
@@ -304,7 +310,7 @@
               </div>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks flex items-start gap-3">
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
               <div>
                 <strong class="text-white block font-bold">NPTEL - Joy of Computing using Python</strong>
@@ -312,7 +318,7 @@
               </div>
             </div>
 
-            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+            <div class="p-3 bg-[#141416] border border-white/10 cad-corner-marks flex items-start gap-3">
               <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
               <div>
                 <strong class="text-white block font-bold">HTML 5 Developer Certification</strong>
@@ -325,10 +331,15 @@
       </div>
     </div>
 
-    <!-- PDF PREVIEW VIEW -->
-    <div *ngIf="viewMode === 'pdf'" class="pdf-card bg-[#141416] border border-cyan-500/80 p-3 sm:p-6 shadow-2xl">
+    <!-- PDF PREVIEW VIEW with 4 Corner Marks -->
+    <div *ngIf="viewMode === 'pdf'" class="pdf-card bg-[#141416] border border-cyan-500/80 p-3 sm:p-6 shadow-2xl relative">
+      <div class="absolute -top-1.5 -left-1.5 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-500 pointer-events-none"></div>
+      <div class="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-500 pointer-events-none"></div>
+      <div class="absolute -bottom-1.5 -left-1.5 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-500 pointer-events-none"></div>
+      <div class="absolute -bottom-1.5 -right-1.5 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-500 pointer-events-none"></div>
+
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
-        <span class="text-xs font-mono text-cyan-400 font-bold uppercase">PDF Document Preview</span>
+        <span class="text-xs font-mono text-cyan-400 font-bold uppercase">PDF Document Preview // GANESH PARHAD</span>
         <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-toolbar-cyan text-xs">
           <i class="bi bi-download"></i> Download File
         </a>

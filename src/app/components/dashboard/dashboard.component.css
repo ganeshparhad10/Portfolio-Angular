@@ -1,13 +1,24 @@
+/* ==========================================================================
+   Hero Blueprint Styling (abhishek-g-mu.vercel.app aesthetic)
+   ========================================================================== */
+
 .hero-section {
-  padding: 60px 0 80px;
+  padding: 40px 0 70px;
   background: var(--bg-body);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+  }
 }
 
 .hero-narrative {
@@ -16,136 +27,16 @@
 }
 
 .hero-name {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--text-main);
-  letter-spacing: -0.035em;
-  margin: 6px 0 16px;
+  line-height: 1.08;
+  margin: 4px 0 12px;
 }
 
 .hero-lead {
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 16px;
+  line-height: 1.4;
+  margin-bottom: 14px;
 }
 
 .hero-bio {
-  font-size: 1rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.hero-social {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.9rem;
-}
-
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-muted);
-  transition: color 0.15s ease;
-}
-
-.social-link:hover {
-  color: var(--text-main);
-}
-
-.social-sep {
-  color: var(--text-dim);
-}
-
-/* Portrait Card */
-.hero-portrait-col {
-  display: flex;
-  justify-content: center;
-}
-
-.portrait-card {
-  width: 100%;
-  max-width: 340px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: var(--shadow-card);
-}
-
-.portrait-image {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  background: #111827;
-}
-
-.portrait-meta {
-  padding-top: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.portrait-name {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.portrait-loc {
-  font-size: 0.82rem;
-  color: var(--text-dim);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-@media (max-width: 992px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-portrait-col {
-    order: -1;
-    justify-content: flex-start;
-  }
-
-  .portrait-card {
-    max-width: 260px;
-  }
-
-  .portrait-image {
-    height: 280px;
-  }
-
-  .hero-name {
-    font-size: 2.8rem;
-  }
-
-  .hero-lead {
-    font-size: 1.2rem;
-  }
+  line-height: 1.65;
+  margin-bottom: 18px;
 }

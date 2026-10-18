@@ -1,59 +1,78 @@
-<div class="projects-page">
+<div class="projects-page bg-[#0A0A0B] bg-artistic-grid py-12">
   <div class="section-container">
-    <div class="section-header">
-      <span class="section-label">Selected Works</span>
-      <h1 class="section-title">Engineering Projects</h1>
-      <p class="section-subtitle">
-        Production-style applications demonstrating microservices architecture, secure role-based access, and Generative AI workflows.
+    <div class="section-header mb-8">
+      <span class="section-label font-mono text-cyan-400 text-xs uppercase tracking-widest font-bold">
+        SELECTED WORKS & PRODUCTION REPOSITORIES
+      </span>
+      <h1 class="section-title font-tech-heading text-3xl sm:text-4xl text-white uppercase tracking-wider font-bold mt-1">
+        Engineering Projects
+      </h1>
+      <p class="section-subtitle text-gray-400 text-sm sm:text-base leading-relaxed font-light mt-2 max-w-2xl">
+        Production-style applications demonstrating Spring Boot microservices, role-based authorization, JWT security, and Generative AI integrations.
       </p>
 
       <!-- Category Filter Tabs -->
-      <div class="filter-tabs">
-        <button class="filter-btn" [class.active]="selectedCategory === 'all'" (click)="setCategory('all')">
+      <div class="filter-tabs flex flex-wrap gap-2 mt-6">
+        <button class="filter-btn font-mono text-xs uppercase tracking-wider" [class.active]="selectedCategory === 'all'" (click)="setCategory('all')">
           All Projects ({{ projects.length }})
         </button>
-        <button class="filter-btn" [class.active]="selectedCategory === 'fullstack'" (click)="setCategory('fullstack')">
+        <button class="filter-btn font-mono text-xs uppercase tracking-wider" [class.active]="selectedCategory === 'fullstack'" (click)="setCategory('fullstack')">
           Full-Stack & Microservices
         </button>
-        <button class="filter-btn" [class.active]="selectedCategory === 'ai'" (click)="setCategory('ai')">
+        <button class="filter-btn font-mono text-xs uppercase tracking-wider" [class.active]="selectedCategory === 'ai'" (click)="setCategory('ai')">
           AI & Machine Learning
         </button>
       </div>
     </div>
 
     <!-- Projects List -->
-    <div class="projects-grid">
-      <div *ngFor="let project of filteredProjects" class="project-entry card-clean">
-        <div class="project-header-bar">
+    <div class="projects-grid flex flex-col gap-8">
+      <div *ngFor="let project of filteredProjects" class="project-entry cad-corner-marks card-clean">
+        <div class="project-header-bar flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-4 mb-4 border-b border-white/10">
           <div>
-            <div class="project-top-meta">
-              <span class="project-date-pill">{{ project.date }}</span>
-              <span *ngIf="project.isFeatured" class="featured-indicator">Flagship</span>
+            <div class="project-top-meta flex items-center gap-2 mb-1.5">
+              <span class="project-date-pill font-mono text-xs text-cyan-400 font-bold px-2 py-0.5 bg-[#0A0A0B] border border-white/10">
+                {{ project.date }}
+              </span>
+              <span *ngIf="project.isFeatured" class="featured-indicator font-mono text-[10px] uppercase tracking-wider text-cyan-400 bg-cyan-950/60 border border-cyan-500/40 px-2 py-0.5">
+                FLAGSHIP PROJECT
+              </span>
             </div>
-            <h2 class="project-title">{{ project.title }}</h2>
-            <div class="project-tagline">{{ project.tagline }}</div>
+            <h2 class="project-title font-tech-heading text-xl sm:text-2xl text-white uppercase tracking-wider font-bold">
+              {{ project.title }}
+            </h2>
+            <div class="project-tagline font-mono text-xs text-cyan-400 font-light mt-0.5">
+              {{ project.tagline }}
+            </div>
           </div>
 
-          <div class="project-actions">
-            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn-primary-clean btn-sm">
+          <div class="project-actions shrink-0">
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn-primary-clean">
               <i class="bi bi-github"></i>
-              <span>GitHub</span>
+              <span>GitHub Repository</span>
             </a>
           </div>
         </div>
 
-        <p class="project-description">{{ project.description }}</p>
+        <p class="project-description text-gray-300 text-sm leading-relaxed font-light mb-4">
+          {{ project.description }}
+        </p>
 
-        <!-- Highlights -->
-        <div class="project-highlights-box">
-          <h4 class="highlights-title">Architecture & Implementation</h4>
-          <ul class="highlights-list">
-            <li *ngFor="let item of project.highlights">{{ item }}</li>
+        <!-- Highlights Box -->
+        <div class="project-highlights-box p-4 bg-[#0A0A0B] border border-white/10 mb-4">
+          <h4 class="highlights-title font-mono text-xs uppercase tracking-wider text-cyan-400 font-bold mb-2">
+            ARCHITECTURAL HIGHLIGHTS & WORKFLOWS
+          </h4>
+          <ul class="highlights-list space-y-2 text-xs text-gray-300 font-sans">
+            <li *ngFor="let item of project.highlights" class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+              <span class="leading-relaxed font-light">{{ item }}</span>
+            </li>
           </ul>
         </div>
 
         <!-- Tech Badges -->
-        <div class="project-tech-row">
+        <div class="project-tech-row flex flex-wrap gap-2">
           <span *ngFor="let tech of project.technologies" class="badge-clean">
             {{ tech }}
           </span>

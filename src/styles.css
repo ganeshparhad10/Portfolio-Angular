@@ -51,17 +51,14 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-body {
+html, body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: #0A0A0B !important;
+  color: var(--text-main) !important;
   font-family: var(--font-sans);
-  background-color: var(--bg-body);
-  color: var(--text-main);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -271,8 +268,9 @@ a:hover {
 
 /* Layout Offset */
 .main-content {
-  padding-top: 70px;
-  min-height: calc(100vh - 70px);
+  padding-top: 68px;
+  min-height: calc(100vh - 68px);
+  background-color: #0A0A0B !important;
 }
 
 /* Blueprint Utility Classes */
@@ -280,6 +278,8 @@ a:hover {
 .font-mono { font-family: var(--font-mono, 'JetBrains Mono', monospace); }
 .text-cyan-400 { color: #22d3ee !important; }
 .text-cyan-500 { color: #06b6d4 !important; }
+.text-black { color: #000000 !important; }
+.bg-cyan-500 { background-color: #06b6d4 !important; }
 .border-cyan-500 { border-color: #06b6d4 !important; }
 .border-cyan-500\/80 { border-color: rgba(6, 182, 212, 0.8) !important; }
 .bg-\[\#0A0A0B\] { background-color: #0A0A0B !important; }

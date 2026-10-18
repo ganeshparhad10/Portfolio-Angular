@@ -1,18 +1,99 @@
-<div class="dashboard">
-  <div class="dash">
-    <div class="text">
-      <h1 class="fade-in">Hello,</h1>
-      <h1 class="fade-in delay-1">I Am Ganesh Parhad</h1>
-      <h2 class="fade-in delay-2 tagline">FullStack Developer</h2><br><br>
-      <p class="fade-in delay-3 quote">"Code is like humor. When you have to explain it, it’s bad." - Cory House</p>
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <!-- Status Badge -->
+      <div class="status-badge">
+        <span class="pulsing-dot"></span>
+        <span>Available for Software Engineer & Java Developer Roles</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title">
+        Hello, I'm <span class="gradient-text">Ganesh Parhad</span>
+      </h1>
+      <h2 class="hero-subtitle">
+        Java Backend & Full-Stack Developer
+      </h2>
+
+      <!-- Description -->
+      <p class="hero-description">
+        CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence & Data Science.
+        I specialize in building scalable RESTful APIs, Spring Boot microservices,
+        secure authentication with JWT, and intelligent integrations using the Google Gemini API.
+      </p>
+
+      <!-- Key Tech Pills -->
+      <div class="tech-pills">
+        <span class="pill"><i class="devicon-java-plain"></i> Core Java</span>
+        <span class="pill"><i class="devicon-spring-plain"></i> Spring Boot</span>
+        <span class="pill"><i class="bi bi-diagram-3-fill"></i> Microservices</span>
+        <span class="pill"><i class="bi bi-shield-check"></i> Spring Security & JWT</span>
+        <span class="pill"><i class="devicon-react-original"></i> React.js / Angular</span>
+        <span class="pill"><i class="bi bi-stars"></i> Gemini AI</span>
+      </div>
+
+      <!-- CTA Action Buttons -->
+      <div class="hero-actions">
+        <a routerLink="/projects" class="btn-brand-primary">
+          <i class="bi bi-grid-fill"></i>
+          <span>View My Projects</span>
+        </a>
+        <a routerLink="/resume" class="btn-brand-secondary">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+          <span>Download Resume</span>
+        </a>
+        <a routerLink="/contact" class="btn-brand-secondary">
+          <i class="bi bi-chat-dots-fill"></i>
+          <span>Contact Me</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span class="metric-value">74.68%</span>
+          <span class="metric-label">CDAC PG-DAC</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-card">
+          <span class="metric-value">7.88</span>
+          <span class="metric-label">B.Tech CGPA</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-card">
+          <span class="metric-value">4+</span>
+          <span class="metric-label">Certifications</span>
+        </div>
+      </div>
     </div>
-    <div class="code">
-      <img src="assets/Templates-Code_Morphing.png" alt="Code Illustration">
+
+    <!-- Hero Illustration / Graphic -->
+    <div class="hero-visual">
+      <div class="visual-glow"></div>
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="file-name">DeveloperProfile.java</span>
+        </div>
+        <pre class="code-snippet"><code><span class="kwd">public class</span> <span class="cls">GaneshParhad</span> &#123;
+  <span class="kwd">private String</span> role = <span class="str">"Java Backend / FullStack"</span>;
+  <span class="kwd">private String</span> education = <span class="str">"CDAC PG-DAC & B.Tech AI"</span>;
+  <span class="kwd">private String[]</span> stack = &#123;
+    <span class="str">"Spring Boot"</span>, <span class="str">"Microservices"</span>,
+    <span class="str">"Spring Security"</span>, <span class="str">"MySQL"</span>,
+    <span class="str">"React.js"</span>, <span class="str">"Gemini AI"</span>
+  &#125;;
+
+  <span class="kwd">public void</span> <span class="fn">buildScalableSystems</span>() &#123;
+    System.out.<span class="fn">println</span>(<span class="str">"Shipping high-performance APIs!"</span>);
+  &#125;
+&#125;</code></pre>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-  
-  <app-my></app-my>
-
-
+<!-- About & Education Section -->
+<app-my></app-my>

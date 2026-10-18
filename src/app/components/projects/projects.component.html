@@ -1,63 +1,80 @@
-<div class="projects-section">
-  <h1 class="section-title"><span>My Projects</span> :</h1>
+<div class="projects-page">
+  <div class="section-container">
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-badge"><i class="bi bi-code-square"></i> Portfolio Works</span>
+      <h1 class="section-title">Featured <span class="gradient-text">Engineering Projects</span></h1>
+      <p class="section-subtitle">
+        Real-world applications spanning Spring Boot microservices, secure authentication, database architectures, and Generative AI.
+      </p>
 
-  <div class="projects-container">
-    <!-- Project 1 -->
-    <div class="project">
-      <img src="assets/book.jpeg" alt="Book Recommender">
-      <div class="project-info">
-        <h2><em>Book Recommender</em></h2>
-        <p class="desc">
-          As an <strong>AI Engineer</strong>, I developed an intelligent <strong>Book Recommendation System</strong> that leverages
-          <strong>Natural Language Processing (NLP)</strong> and <strong>Machine Learning</strong> to provide personalized book recommendations.
-          The system analyzes user preferences, reading history, and genre interests using a recommendation algorithm based on
-          <strong>Python, Cosine Similarity, and TF-IDF.</strong>
-          The optimized backend ensures fast and accurate book suggestions, offering users an engaging and personalized reading experience.
-          The FrontEnd is made with <strong>HTML/CSS, Ejs, Nodejs</strong> and Dataset used is
-          <a href="https://www.kaggle.com/datasets/syedjaferk/book-crossing-dataset"><strong> Book Crossing Dataset </strong></a>.
-        </p>
-         <!-- LinkedIn and GitHub Buttons (Centered) -->
-         <div class="education-buttons mt-3">
-          <a href="https://github.com/ganeshparhad10/BOOK-RECOMMENDATION-SYSTEM" target="_blank" class="btn btn-dark">
-              <i class="fab fa-github"></i> GitHub
-          </a>
-      </div>
-
-        <!-- <ul>
-          <li><strong>Python</strong></li>
-          <li><strong>HTML/CSS</strong></li>
-          <li><strong>Ejs</strong></li>
-          <li><strong>Mongodb</strong></li>
-          <li><strong>Nodejs</strong></li>
-        </ul> -->
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn" [class.active]="selectedCategory === 'all'" (click)="setCategory('all')">
+          All Projects ({{ projects.length }})
+        </button>
+        <button class="filter-btn" [class.active]="selectedCategory === 'fullstack'" (click)="setCategory('fullstack')">
+          Full-Stack & Microservices
+        </button>
+        <button class="filter-btn" [class.active]="selectedCategory === 'ai'" (click)="setCategory('ai')">
+          AI & Machine Learning
+        </button>
       </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project">
-      <img src="assets/SAMS.png" alt="EduTrack">
-      <div class="project-info">
-        <h2><em>EduTrack</em></h2>
-        <p class="desc">
-          <strong>EduTrack</strong> – A powerful, education-focused <strong>Attendance Tracking System</strong> designed to streamline student  attendance management.
-          Built using <strong>Spring Boot, Java, Hibernate, Angular and MySQL</strong>, the system ensures seamless data management with high efficiency.
-          Key features include a robust <strong>REST API</strong> that enables <strong>CRUD operations</strong> for Students, Subjects, Faculty, and Attendance Records,
-          providing an intuitive and flexible solution for educational institutions.
-        </p>
-        <!-- LinkedIn and GitHub Buttons (Centered) -->
-        <div class="education-buttons mt-3">
-          <a href="https://github.com/ganeshparhad10/EduTrack" target="_blank" class="btn btn-dark">
-              <i class="fab fa-github"></i> GitHub
-          </a>
-      </div>
-        <!-- <ul>
-          <li><strong>Angular</strong></li>
-          <li><strong>Angular</strong></li>
-          <li><strong>Angular</strong></li>
+    <!-- Projects List -->
+    <div class="projects-list">
+      <div *ngFor="let project of filteredProjects" class="project-card glass-card" [class.featured]="project.isFeatured">
+        <!-- Thumbnail / Visual -->
+        <div class="project-thumbnail-wrapper">
+          <img [src]="project.image" [alt]="project.title" class="project-thumbnail">
+          <div class="thumbnail-overlay">
+            <span *ngIf="project.isFeatured" class="featured-badge">
+              <i class="bi bi-star-fill"></i> Flagship Project
+            </span>
+            <span class="date-badge">{{ project.date }}</span>
+          </div>
+        </div>
 
-        </ul> -->
+        <!-- Details -->
+        <div class="project-details">
+          <div class="project-header-bar">
+            <div>
+              <h2 class="project-name">{{ project.title }}</h2>
+              <span class="project-tagline">{{ project.tagline }}</span>
+            </div>
+          </div>
+
+          <p class="project-summary">{{ project.description }}</p>
+
+          <!-- Key Highlights Bullet Points -->
+          <div class="project-highlights">
+            <h4>Key Architectural Highlights:</h4>
+            <ul>
+              <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+            </ul>
+          </div>
+
+          <!-- Technologies Badges -->
+          <div class="project-technologies">
+            <span *ngFor="let tech of project.technologies" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+
+          <!-- Actions -->
+          <div class="project-footer-actions">
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn-brand-primary">
+              <i class="bi bi-github"></i>
+              <span>View Source Code</span>
+            </a>
+            <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="btn-brand-secondary">
+              <i class="bi bi-box-arrow-up-right"></i>
+              <span>Live Demo</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 </div>

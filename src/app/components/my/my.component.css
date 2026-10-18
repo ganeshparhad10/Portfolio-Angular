@@ -1,49 +1,270 @@
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  background-size: cover;
-  background-color: linear-gradient(rgba(76, 43, 43, 0.8),rgba(5, 9, 4, 0));;
-  height: 50vh;
+.about-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
 }
 
-/* Profile Image */
-.profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover; /* Ensures perfect circle without distortion */
-  border: 5px solid #210202;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+.about-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
-/* About Me Text */
-.about-text {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.6;
-  font-style: oblique;
-}
-
-/* Future Content Section */
-.future {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.6;
-  font-style: oblique;
-}
-
-/* Reduce gap between image and text */
-.row.align-items-center {
-  margin-bottom: 20px;
-}
-
-/* Center align buttons in Education section */
-.education-buttons {
+/* Profile Card */
+.profile-card {
+  padding: 36px 28px;
   text-align: center;
+  position: sticky;
+  top: 100px;
 }
 
-/* Add some margin between buttons */
-.education-buttons a {
-  margin: 5px;
+.profile-img-wrapper {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 24px;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 4px solid #1e293b;
+}
+
+.profile-ring {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.profile-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--text-main);
+}
+
+.profile-title {
+  font-size: 0.95rem;
+  color: var(--primary-light);
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.profile-location {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.profile-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  margin: 0 auto 18px;
+  border-radius: 2px;
+}
+
+.profile-bio {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.profile-bio strong {
+  color: #e2e8f0;
+}
+
+.social-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-btn.linkedin {
+  background: rgba(10, 102, 194, 0.15);
+  color: #60a5fa !important;
+  border: 1px solid rgba(10, 102, 194, 0.3);
+}
+.social-btn.linkedin:hover {
+  background: #0a66c2;
+  color: #ffffff !important;
+}
+
+.social-btn.github {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f5f9 !important;
+  border: 1px solid var(--border-subtle);
+}
+.social-btn.github:hover {
+  background: #24292e;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-btn.email {
+  background: rgba(236, 72, 153, 0.12);
+  color: #f472b6 !important;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+.social-btn.email:hover {
+  background: #db2777;
+  color: #ffffff !important;
+}
+
+/* Credentials Column */
+.credentials-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-header h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timeline-item {
+  padding: 22px 24px;
+  position: relative;
+}
+
+.timeline-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.timeline-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.timeline-year {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  background: rgba(99, 102, 241, 0.12);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.timeline-institution {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.timeline-grade {
+  margin-bottom: 10px;
+}
+
+.badge-grade {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.timeline-details {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Certifications Grid */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.cert-pill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+}
+
+.cert-icon {
+  font-size: 1.7rem;
+  color: #fbbf24;
+}
+
+.cert-pill strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #f1f5f9;
+  line-height: 1.3;
+}
+
+.cert-issuer {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-card {
+    position: static;
+  }
 }

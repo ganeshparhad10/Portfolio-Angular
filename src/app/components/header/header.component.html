@@ -1,20 +1,57 @@
-<!-- header.component.html -->
+<header class="site-header">
+  <div class="header-inner">
+    <!-- Brand Logo -->
+    <a routerLink="/" class="brand-link" (click)="closeMenu()">
+      <div class="brand-icon">
+        <i class="bi bi-terminal-fill"></i>
+      </div>
+      <div class="brand-info">
+        <span class="brand-name">Ganesh Parhad</span>
+        <span class="brand-role"><span class="status-dot"></span> Java & Full-Stack</span>
+      </div>
+    </a>
 
-<header class="header">
-  <div class="header-content">
-    <div class="logo">
-      <h1><img width="25" height="25" src="https://img.icons8.com/external-sbts2018-solid-sbts2018/58/external-developer-basic-ui-elements-2.2-sbts2018-solid-sbts2018.png" alt="external-developer-basic-ui-elements-2.2-sbts2018-solid-sbts2018">Innovate | Code | Build</h1>
-      <p class="tagline"> Transforming Ideas into Scalable Solutions</p>
-    </div>
-    <nav class="nav">
+    <!-- Mobile Hamburger Toggle -->
+    <button class="mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+      <i class="bi" [ngClass]="isMenuOpen ? 'bi-x-lg' : 'bi-list'"></i>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-container" [class.open]="isMenuOpen">
       <ul class="nav-links">
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/skill">Skills</a></li>
-        <li><a routerLink="/projects">Projects</a></li>
-        <li><a routerLink="/resume">Resume</a></li>
-        <li><a routerLink="/contact">Contact Me</a></li>
+        <li>
+          <a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" (click)="closeMenu()">
+            <i class="bi bi-house-door"></i> Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">
+            <i class="bi bi-cpu"></i> Skills
+          </a>
+        </li>
+        <li>
+          <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">
+            <i class="bi bi-kanban"></i> Projects
+          </a>
+        </li>
+        <li>
+          <a routerLink="/resume" routerLinkActive="active" (click)="closeMenu()">
+            <i class="bi bi-file-earmark-person"></i> Resume
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+            <i class="bi bi-envelope"></i> Contact Me
+          </a>
+        </li>
       </ul>
-    </nav>
 
+      <div class="nav-cta">
+        <a routerLink="/contact" class="btn-cta" (click)="closeMenu()">
+          <span>Hire Me</span>
+          <i class="bi bi-arrow-right-short"></i>
+        </a>
+      </div>
+    </nav>
   </div>
 </header>

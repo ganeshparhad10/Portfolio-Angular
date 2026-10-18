@@ -1,59 +1,79 @@
-<!-- app.component.html -->
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer with Date and Time</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-  <footer class="footer">
-    <div class="footer-content">
-      <!-- Date and Time Section -->
-      <div class="footer-section date-section">
-        <div class="date-container">
-
-          <div class="date-text">
-            <h2>Date and Time</h2>
-
-            <h3>{{ currentDate }}</h3>
-            <h3>{{ currentTime }}</h3>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <!-- Col 1: About Brand -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <div class="brand-icon">
+            <i class="bi bi-terminal-fill"></i>
           </div>
+          <span class="brand-name">Ganesh Parhad</span>
+        </div>
+        <p class="brand-desc">
+          CDAC PG-DAC Graduate & Full-Stack Java Engineer passionate about building scalable, secure enterprise backends, microservices, and AI-driven applications.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://youtube.com/channel/UCeey0E1RH-ey994Jy7nqNYg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="mailto:ganeshparhad42@gmail.com" aria-label="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Contact Section -->
-      <div class="footer-section contact">
-        <h3>Contact</h3>
-        <p><a href="mailto:ganeshparhad42@gmail.com"><i class="fab fa-google"></i> ganeshparhad42@gmail.com</a></p>
-        <p><i class="fas fa-phone-alt"></i> +91 8421028276</p>
-        <p><i class="fas fa-map-marker-alt"></i> HariOm Nagar Near Renuka Petrol Pump<br>
-          Chikhli, Bildhana, Maharashtra, India.
-        </p>
-      </div>
-
-      <!-- Social Section -->
-      <div class="footer-section social">
-        <h3>Social</h3>
-        <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          <li><a href="https://github.com/ganeshparhad10" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-          <li><a href="https://youtube.com/channel/UCeey0E1RH-ey994Jy7nqNYg" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-nav">
+          <li><a routerLink="/"><i class="bi bi-chevron-right"></i> Home</a></li>
+          <li><a routerLink="/skills"><i class="bi bi-chevron-right"></i> Technical Skills</a></li>
+          <li><a routerLink="/projects"><i class="bi bi-chevron-right"></i> Projects</a></li>
+          <li><a routerLink="/resume"><i class="bi bi-chevron-right"></i> Resume</a></li>
+          <li><a routerLink="/contact"><i class="bi bi-chevron-right"></i> Contact Me</a></li>
         </ul>
       </div>
 
-      <!-- Services Section -->
-      <div class="footer-section service">
-        <h3>Services</h3>
-        <ul class="services">
-          <li>Java Developer</li>
-          <li>Full-Stack Developer</li>
+      <!-- Col 3: Specializations -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Core Domains</h4>
+        <ul class="footer-nav">
+          <li><span><i class="bi bi-check2"></i> Spring Boot & Microservices</span></li>
+          <li><span><i class="bi bi-check2"></i> Spring Security & JWT</span></li>
+          <li><span><i class="bi bi-check2"></i> RESTful API Architecture</span></li>
+          <li><span><i class="bi bi-check2"></i> Angular & React.js Frontends</span></li>
+          <li><span><i class="bi bi-check2"></i> Generative AI (Gemini API)</span></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Direct -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Get In Touch</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:ganeshparhad42@gmail.com">ganeshparhad42@gmail.com</a>
+          </li>
+          <li>
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+918421028276">+91 8421028276</a>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Chikhli, Buldhana, Maharashtra, India</span>
+          </li>
         </ul>
       </div>
     </div>
-    <hr>
-    <div class="footer-section-copyright">
-      <p>© 2025 Developed by Ganesh Parhad. All rights reserved.</p>
-    </div>
-  </footer>
 
+    <div class="footer-bottom">
+      <p>© {{ currentYear }} Designed & Developed by Ganesh Parhad. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

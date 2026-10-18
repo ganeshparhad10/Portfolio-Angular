@@ -1,73 +1,37 @@
+<div class="skills-page">
+  <div class="section-container">
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-badge"><i class="bi bi-cpu-fill"></i> Technical Expertise</span>
+      <h1 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h1>
+      <p class="section-subtitle">
+        A structured breakdown of my enterprise Java backend proficiencies, modern frontend tools, and AI integrations.
+      </p>
+    </div>
 
-<head>
+    <!-- Skills Category Sections -->
+    <div class="skills-categories-grid">
+      <div *ngFor="let category of skillCategories" class="category-card glass-card">
+        <div class="category-header">
+          <div class="category-icon-wrapper">
+            <i [class]="category.icon"></i>
+          </div>
+          <h2 class="category-title">{{ category.title }}</h2>
+        </div>
 
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-</head>
-
-
-
-
-<div class="color">
-
-<h1 class="skk">My Skills</h1>
-
-  <div class="Devicon" if="Skill">
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg"/>
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
-
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg" />
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-plain-wordmark.svg" />
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-
-
-
-    <i class="devicon-github-original-wordmark"></i>
-
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" />
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
-
-
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" />
-
-
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original-wordmark.svg" />
-
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-
-
-
-
-
-
-
-
+        <div class="skills-items-grid">
+          <div *ngFor="let skill of category.skills" class="skill-item">
+            <div class="skill-icon-box">
+              <i *ngIf="skill.isBootstrapIcon" [class]="skill.iconClass"></i>
+              <i *ngIf="!skill.isBootstrapIcon" [class]="skill.iconClass"></i>
+            </div>
+            <div class="skill-info">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level">{{ skill.level }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>

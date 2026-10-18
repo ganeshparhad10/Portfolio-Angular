@@ -2,15 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PortfolioFrontend</title>
+  <title>Ganesh Parhad | Java Backend & Full-Stack Developer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Ganesh Parhad - CDAC PG-DAC Graduate & Full-Stack Java Developer specializing in Spring Boot, Microservices, Spring Security, React.js, and Generative AI.">
+  <meta name="keywords" content="Ganesh Parhad, Java Developer, Spring Boot, Microservices, React.js, Angular, CDAC, Full Stack Developer, Generative AI">
+  <meta name="author" content="Ganesh Bhaskar Parhad">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ganesh Parhad | Java Backend & Full-Stack Developer">
+  <meta property="og:description" content="Explore projects in Spring Boot Microservices, Spring Security, Angular, React.js, and Generative AI.">
+  <meta property="og:url" content="https://ganeshparhad10.github.io/Portfolio-Angular/">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sofia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- GitHub Pages SPA Redirect Handling -->
+  <script>
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
 </head>
 <body>
   <app-root></app-root>
 </body>
 </html>
+

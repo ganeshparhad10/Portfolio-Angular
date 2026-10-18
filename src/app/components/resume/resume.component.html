@@ -1,8 +1,58 @@
-<div class="resume-container">
-  <h2>My Resume</h2>
-  <iframe
-    src="assets/Ganesh-Parhad.pdf"
-    width="100%"
-    height="800px">
-  </iframe>
+<div class="resume-page">
+  <div class="section-container">
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-badge"><i class="bi bi-file-earmark-person-fill"></i> Curriculum Vitae</span>
+      <h1 class="section-title">Professional <span class="gradient-text">Resume</span></h1>
+      <p class="section-subtitle">
+        Review my technical qualifications, CDAC PG-DAC credentials, engineering projects, and certifications.
+      </p>
+
+      <!-- Action Buttons Bar -->
+      <div class="resume-actions-bar">
+        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-brand-primary">
+          <i class="bi bi-download"></i>
+          <span>Download Resume (PDF)</span>
+        </a>
+        <a href="assets/Ganesh-Parhad.pdf" target="_blank" rel="noopener noreferrer" class="btn-brand-secondary">
+          <i class="bi bi-box-arrow-up-right"></i>
+          <span>Open Fullscreen</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Viewer Container -->
+    <div class="resume-viewer-container glass-card">
+      <div class="viewer-top-bar">
+        <div class="dots-group">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="viewer-title"><i class="bi bi-file-pdf-fill"></i> Ganesh-Parhad.pdf</span>
+        <a href="assets/Ganesh-Parhad.pdf" download class="quick-download-link" title="Download">
+          <i class="bi bi-download"></i>
+        </a>
+      </div>
+
+      <!-- Iframe with mobile fallback notice -->
+      <div class="iframe-wrapper">
+        <iframe
+          src="assets/Ganesh-Parhad.pdf"
+          title="Ganesh Parhad Resume"
+          width="100%"
+          height="950px"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Mobile Fallback Banner -->
+      <div class="mobile-fallback-banner">
+        <p><i class="bi bi-info-circle-fill"></i> On mobile screens, PDF previews may not display automatically.</p>
+        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-brand-primary btn-sm">
+          <i class="bi bi-download"></i> Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,174 +1,96 @@
 .site-footer {
-  background: #070a10;
+  background: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
-  padding: 60px 0 30px;
-  color: var(--text-muted);
+  padding: 60px 0 32px;
 }
 
 .footer-inner {
-  max-width: 1240px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 36px;
   border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Brand Col */
 .footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.brand-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 1.1rem;
+  max-width: 320px;
 }
 
 .brand-name {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 8px;
 }
 
-.brand-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--text-dim);
-  margin-bottom: 20px;
-  max-width: 320px;
-}
-
-.footer-social-links {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-social-links a {
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.brand-bio {
+  font-size: 0.88rem;
   color: var(--text-muted);
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.footer-social-links a:hover {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #ffffff;
-  transform: translateY(-2px);
+.footer-links-group {
+  display: flex;
+  gap: 60px;
 }
 
-/* Footer Cols */
-.footer-heading {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 18px;
-  letter-spacing: -0.01em;
+.col-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 12px;
 }
 
-.footer-nav, .footer-contact-list {
+.footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
-.footer-nav li a {
-  color: var(--text-dim);
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-}
-
-.footer-nav li a:hover {
-  color: var(--primary-light);
-  transform: translateX(4px);
-}
-
-.footer-nav li span {
-  color: var(--text-dim);
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.footer-nav li span i {
-  color: var(--primary-light);
-}
-
-.footer-contact-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+.footer-col ul li a {
+  color: var(--text-muted);
   font-size: 0.88rem;
-  color: var(--text-dim);
+  transition: color 0.15s ease;
 }
 
-.footer-contact-list li i {
-  color: var(--primary-light);
-  font-size: 1rem;
-  margin-top: 2px;
+.footer-col ul li a:hover {
+  color: var(--text-main);
 }
 
-.footer-contact-list li a {
-  color: var(--text-dim);
-  transition: color 0.2s ease;
-  word-break: break-all;
-}
-
-.footer-contact-list li a:hover {
-  color: #ffffff;
-}
-
-/* Bottom Bar */
 .footer-bottom {
   padding-top: 24px;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
   color: var(--text-dim);
-  margin: 0;
 }
 
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
+.location-badge {
+  color: var(--text-dim);
 }
 
-@media (max-width: 576px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .footer-links-group {
+    gap: 36px;
   }
 }

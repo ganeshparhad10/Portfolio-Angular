@@ -1,57 +1,46 @@
 <header class="site-header">
   <div class="header-inner">
-    <!-- Brand Logo -->
-    <a routerLink="/" class="brand-link" (click)="closeMenu()">
-      <div class="brand-icon">
-        <i class="bi bi-terminal-fill"></i>
-      </div>
-      <div class="brand-info">
-        <span class="brand-name">Ganesh Parhad</span>
-        <span class="brand-role"><span class="status-dot"></span> Java & Full-Stack</span>
-      </div>
+    <!-- Brand -->
+    <a routerLink="/" class="brand" (click)="closeMenu()">
+      <span class="brand-name">Ganesh Parhad</span>
+      <span class="brand-divider">/</span>
+      <span class="brand-role">Software Engineer</span>
     </a>
 
-    <!-- Mobile Hamburger Toggle -->
+    <!-- Mobile Menu Toggle -->
     <button class="mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
       <i class="bi" [ngClass]="isMenuOpen ? 'bi-x-lg' : 'bi-list'"></i>
     </button>
 
-    <!-- Navigation Menu -->
+    <!-- Navigation Links (No "Hire Me" button) -->
     <nav class="nav-container" [class.open]="isMenuOpen">
       <ul class="nav-links">
         <li>
           <a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" (click)="closeMenu()">
-            <i class="bi bi-house-door"></i> Home
+            Home
           </a>
         </li>
         <li>
           <a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">
-            <i class="bi bi-cpu"></i> Skills
+            Skills
           </a>
         </li>
         <li>
           <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">
-            <i class="bi bi-kanban"></i> Projects
+            Projects
           </a>
         </li>
         <li>
           <a routerLink="/resume" routerLinkActive="active" (click)="closeMenu()">
-            <i class="bi bi-file-earmark-person"></i> Resume
+            Resume
           </a>
         </li>
         <li>
           <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
-            <i class="bi bi-envelope"></i> Contact Me
+            Contact
           </a>
         </li>
       </ul>
-
-      <div class="nav-cta">
-        <a routerLink="/contact" class="btn-cta" (click)="closeMenu()">
-          <span>Hire Me</span>
-          <i class="bi bi-arrow-right-short"></i>
-        </a>
-      </div>
     </nav>
   </div>
 </header>

@@ -1,57 +1,268 @@
 <div class="resume-page">
   <div class="section-container">
-    <!-- Header -->
-    <div class="section-header">
-      <span class="section-badge"><i class="bi bi-file-earmark-person-fill"></i> Curriculum Vitae</span>
-      <h1 class="section-title">Professional <span class="gradient-text">Resume</span></h1>
-      <p class="section-subtitle">
-        Review my technical qualifications, CDAC PG-DAC credentials, engineering projects, and certifications.
-      </p>
+    <!-- Page Header & Action Controls -->
+    <div class="resume-top-header">
+      <div>
+        <span class="section-label">Curriculum Vitae</span>
+        <h1 class="section-title">Resume</h1>
+        <p class="section-subtitle">
+          Comprehensive overview of education, technical competencies, engineering projects, and credentials.
+        </p>
+      </div>
 
-      <!-- Action Buttons Bar -->
-      <div class="resume-actions-bar">
-        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-brand-primary">
-          <i class="bi bi-download"></i>
-          <span>Download Resume (PDF)</span>
-        </a>
-        <a href="assets/Ganesh-Parhad.pdf" target="_blank" rel="noopener noreferrer" class="btn-brand-secondary">
-          <i class="bi bi-box-arrow-up-right"></i>
-          <span>Open Fullscreen</span>
-        </a>
+      <!-- Action Toolbar -->
+      <div class="resume-toolbar">
+        <div class="view-toggle">
+          <button
+            type="button"
+            class="toggle-btn"
+            [class.active]="viewMode === 'digital'"
+            (click)="setViewMode('digital')">
+            <i class="bi bi-file-earmark-person"></i>
+            <span>Interactive View</span>
+          </button>
+          <button
+            type="button"
+            class="toggle-btn"
+            [class.active]="viewMode === 'pdf'"
+            (click)="setViewMode('pdf')">
+            <i class="bi bi-file-pdf"></i>
+            <span>PDF Preview</span>
+          </button>
+        </div>
+
+        <div class="action-buttons">
+          <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-primary-clean">
+            <i class="bi bi-download"></i>
+            <span>Download PDF</span>
+            <span class="btn-subtext">5.5 KB</span>
+          </a>
+          <a href="assets/Ganesh-Parhad.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-clean" title="Open in New Tab">
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <button type="button" (click)="printResume()" class="btn-secondary-clean d-none d-md-inline-flex" title="Print Resume">
+            <i class="bi bi-printer"></i>
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Viewer Container -->
-    <div class="resume-viewer-container glass-card">
-      <div class="viewer-top-bar">
-        <div class="dots-group">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+    <!-- VIEW 1: Digital Interactive Resume Document -->
+    <div *ngIf="viewMode === 'digital'" class="digital-resume-sheet">
+      <!-- Resume Sheet Header -->
+      <header class="sheet-header">
+        <div class="sheet-identity">
+          <h2 class="sheet-name">GANESH BHASKAR PARHAD</h2>
+          <p class="sheet-role">Java Backend & Full-Stack Developer</p>
         </div>
-        <span class="viewer-title"><i class="bi bi-file-pdf-fill"></i> Ganesh-Parhad.pdf</span>
-        <a href="assets/Ganesh-Parhad.pdf" download class="quick-download-link" title="Download">
-          <i class="bi bi-download"></i>
+
+        <div class="sheet-contacts">
+          <div class="contact-line">
+            <i class="bi bi-telephone"></i>
+            <a href="tel:+918421028276">+91 8421028276</a>
+          </div>
+          <div class="contact-line">
+            <i class="bi bi-envelope"></i>
+            <a href="mailto:ganeshparhad42@gmail.com">ganeshparhad42@gmail.com</a>
+          </div>
+          <div class="contact-line">
+            <i class="bi bi-geo-alt"></i>
+            <span>Chikhli, Maharashtra - 443201, India</span>
+          </div>
+          <div class="contact-line">
+            <i class="bi bi-linkedin"></i>
+            <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a" target="_blank" rel="noopener noreferrer">linkedin.com/in/ganesh-parhad-b77b9225a</a>
+          </div>
+          <div class="contact-line">
+            <i class="bi bi-github"></i>
+            <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer">github.com/ganeshparhad10</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Section: Professional Summary -->
+      <section class="sheet-section">
+        <h3 class="sheet-heading">Professional Summary</h3>
+        <p class="sheet-text">
+          CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence and Data Science, specializing in Java Backend Development. 
+          Hands-on experience in developing RESTful APIs and microservices-based applications using Java, Spring Boot, Spring Security, and MySQL. 
+          Familiar with JWT authentication, React.js integration, and Generative AI integration using the Gemini API. 
+          Strong understanding of Object-Oriented Programming, DBMS, SQL, and backend application development.
+        </p>
+      </section>
+
+      <!-- Section: Education -->
+      <section class="sheet-section">
+        <h3 class="sheet-heading">Education</h3>
+        
+        <div class="sheet-item">
+          <div class="sheet-item-header">
+            <div>
+              <strong class="item-title">CDAC (Know It)</strong>
+              <div class="item-subtitle">Postgraduation Certification in Advanced Computing</div>
+            </div>
+            <div class="item-meta">
+              <span class="item-date">2026</span>
+              <span class="item-score">Grade: 74.68%</span>
+              <span class="item-loc">Pune, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sheet-item">
+          <div class="sheet-item-header">
+            <div>
+              <strong class="item-title">CSMSS Chh. Shahu College of Engineering</strong>
+              <div class="item-subtitle">Bachelor of Technology in Artificial Intelligence and Data Science</div>
+            </div>
+            <div class="item-meta">
+              <span class="item-date">2021 – 2025</span>
+              <span class="item-score">CGPA: 7.88</span>
+              <span class="item-loc">Aurangabad, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sheet-item">
+          <div class="sheet-item-header">
+            <div>
+              <strong class="item-title">Janata Mahavidyalaya</strong>
+              <div class="item-subtitle">Higher Secondary Certificate (HSC) Maharashtra State Board</div>
+            </div>
+            <div class="item-meta">
+              <span class="item-date">2021</span>
+              <span class="item-score">Grade: 89%</span>
+              <span class="item-loc">Chandrapur, India</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Technical Skills -->
+      <section class="sheet-section">
+        <h3 class="sheet-heading">Technical Skills</h3>
+        <div class="sheet-skills-grid">
+          <div class="skill-row">
+            <span class="skill-label">Programming Languages:</span>
+            <span class="skill-value">Java, SQL, JavaScript, Python</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Database Systems:</span>
+            <span class="skill-value">MySQL, Relational DBMS</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Java Technologies:</span>
+            <span class="skill-value">Core Java, Spring, Spring Boot, Spring Security, Hibernate, Spring Data JPA</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Frontend Technologies:</span>
+            <span class="skill-value">HTML5, CSS3, JavaScript, React.js, Angular</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-label">Tools & Platforms:</span>
+            <span class="skill-value">Git, GitHub, Maven, Postman, VS Code, Spring Tool Suite</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Projects -->
+      <section class="sheet-section">
+        <h3 class="sheet-heading">Engineering Projects</h3>
+
+        <!-- WorkPlus -->
+        <div class="sheet-project">
+          <div class="project-top-row">
+            <div>
+              <strong class="item-title">WorkPlus – Workforce Management Platform</strong>
+              <div class="project-tools">
+                Tools: Java, Spring Boot, REST API, Microservices, React.js, MySQL, Spring Security, JWT, Generative AI (Gemini), Git/GitHub
+              </div>
+            </div>
+            <div class="project-meta-right">
+              <span class="item-date">Aug 2026</span>
+              <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" class="link-code">
+                <i class="bi bi-github"></i> Repository
+              </a>
+            </div>
+          </div>
+          <ul class="sheet-bullets">
+            <li>Developed a role-based workforce management platform supporting Admin, HR Head, Manager, and Employee roles for project management, task allocation, attendance, and timesheet workflows.</li>
+            <li>Developed RESTful APIs using Spring Boot and Microservices architecture, separating authentication, business operations, transactions, and AI assistant modules.</li>
+            <li>Implemented secure authentication using Spring Security, JWT, BCrypt password hashing, and role-based authorization.</li>
+            <li>Integrated MySQL with Spring Data JPA and Hibernate to manage users, projects, employee assignments, tasks, attendance, and timesheet records.</li>
+            <li>Integrated a Generative AI assistant using Gemini API to answer employee task-related queries using authenticated employee task data.</li>
+            <li>Developed React.js dashboards and integrated backend services through REST APIs.</li>
+          </ul>
+        </div>
+
+        <!-- EduTrack -->
+        <div class="sheet-project">
+          <div class="project-top-row">
+            <div>
+              <strong class="item-title">EduTrack: Education-Focused Attendance Tracker</strong>
+              <div class="project-tools">
+                Tools: Spring Boot, Java, Hibernate, MySQL, Angular
+              </div>
+            </div>
+            <div class="project-meta-right">
+              <span class="item-date">Jan 2025</span>
+              <a href="https://github.com/ganeshparhad10/EduTrack" target="_blank" rel="noopener noreferrer" class="link-code">
+                <i class="bi bi-github"></i> Repository
+              </a>
+            </div>
+          </div>
+          <ul class="sheet-bullets">
+            <li>Developed RESTful APIs to manage students, subjects, faculty, and attendance records.</li>
+            <li>Implemented CRUD operations for attendance management and maintained structured, transactional data access.</li>
+            <li>Implemented role-based access for Admin and Faculty to secure application operations.</li>
+            <li>Designed entity relationships between Students, Subjects, and Faculty using Hibernate annotations.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: Certifications -->
+      <section class="sheet-section">
+        <h3 class="sheet-heading">Certifications</h3>
+        <div class="sheet-certs-grid">
+          <div class="cert-entry">
+            <strong>NPTEL Programming in Java</strong>
+            <span>IIT Kharagpur</span>
+          </div>
+          <div class="cert-entry">
+            <strong>Fundamentals of Deep Learning</strong>
+            <span>NVIDIA</span>
+          </div>
+          <div class="cert-entry">
+            <strong>NPTEL - Joy of Computing using Python</strong>
+            <span>IIT Madras</span>
+          </div>
+          <div class="cert-entry">
+            <strong>HTML 5</strong>
+            <span>Infosys | Springboard</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- VIEW 2: PDF Document View -->
+    <div *ngIf="viewMode === 'pdf'" class="pdf-viewer-card card-clean">
+      <div class="pdf-viewer-header">
+        <div class="pdf-info">
+          <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+          <span>Ganesh-Parhad.pdf</span>
+        </div>
+        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-primary-clean btn-sm">
+          <i class="bi bi-download"></i> Download
         </a>
       </div>
 
-      <!-- Iframe with mobile fallback notice -->
-      <div class="iframe-wrapper">
+      <div class="pdf-frame-wrapper">
         <iframe
           src="assets/Ganesh-Parhad.pdf"
-          title="Ganesh Parhad Resume"
+          title="Ganesh Parhad Resume PDF"
           width="100%"
-          height="950px"
-          loading="lazy">
+          height="1000px">
         </iframe>
-      </div>
-
-      <!-- Mobile Fallback Banner -->
-      <div class="mobile-fallback-banner">
-        <p><i class="bi bi-info-circle-fill"></i> On mobile screens, PDF previews may not display automatically.</p>
-        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-brand-primary btn-sm">
-          <i class="bi bi-download"></i> Download PDF
-        </a>
       </div>
     </div>
   </div>

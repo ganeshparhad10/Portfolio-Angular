@@ -1,99 +1,83 @@
 <section class="hero-section">
-  <div class="hero-container">
-    <div class="hero-content">
-      <!-- Status Badge -->
-      <div class="status-badge">
-        <span class="pulsing-dot"></span>
-        <span>Available for Software Engineer & Java Developer Roles</span>
+  <div class="section-container">
+    <div class="hero-grid">
+      <!-- Left: Narrative -->
+      <div class="hero-narrative">
+        <span class="section-label">Software Engineer & Java Specialist</span>
+
+        <h1 class="hero-name">
+          Ganesh Parhad
+        </h1>
+
+        <p class="hero-lead">
+          I build robust backend architectures, Spring Boot microservices, and modern AI-powered applications.
+        </p>
+
+        <p class="hero-bio">
+          CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence & Data Science.
+          Specialized in developing resilient RESTful APIs, implementing role-based security with JWT,
+          and building full-stack platforms using Java, Spring Boot, MySQL, and modern frontends.
+        </p>
+
+        <!-- Understated Tech Chips -->
+        <div class="hero-tags">
+          <span class="badge-clean"><i class="devicon-java-plain"></i> Core Java</span>
+          <span class="badge-clean"><i class="devicon-spring-plain"></i> Spring Boot</span>
+          <span class="badge-clean"><i class="bi bi-diagram-3"></i> Microservices</span>
+          <span class="badge-clean"><i class="bi bi-shield-check"></i> Spring Security</span>
+          <span class="badge-clean"><i class="devicon-mysql-original"></i> MySQL</span>
+          <span class="badge-clean"><i class="devicon-react-original"></i> React.js / Angular</span>
+          <span class="badge-clean"><i class="bi bi-stars"></i> Gemini AI</span>
+        </div>
+
+        <!-- Action Links -->
+        <div class="hero-actions">
+          <a routerLink="/projects" class="btn-primary-clean">
+            <i class="bi bi-folder2-open"></i>
+            <span>View Projects</span>
+          </a>
+          <a routerLink="/resume" class="btn-secondary-clean">
+            <i class="bi bi-file-earmark-text"></i>
+            <span>Read Resume</span>
+          </a>
+          <a routerLink="/contact" class="btn-secondary-clean">
+            <i class="bi bi-envelope"></i>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Social Connections -->
+        <div class="hero-social">
+          <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+          </a>
+          <span class="social-sep">•</span>
+          <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="bi bi-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <span class="social-sep">•</span>
+          <a href="mailto:ganeshparhad42@gmail.com" class="social-link">
+            <i class="bi bi-envelope-fill"></i>
+            <span>Email</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Main Headline -->
-      <h1 class="hero-title">
-        Hello, I'm <span class="gradient-text">Ganesh Parhad</span>
-      </h1>
-      <h2 class="hero-subtitle">
-        Java Backend & Full-Stack Developer
-      </h2>
-
-      <!-- Description -->
-      <p class="hero-description">
-        CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence & Data Science.
-        I specialize in building scalable RESTful APIs, Spring Boot microservices,
-        secure authentication with JWT, and intelligent integrations using the Google Gemini API.
-      </p>
-
-      <!-- Key Tech Pills -->
-      <div class="tech-pills">
-        <span class="pill"><i class="devicon-java-plain"></i> Core Java</span>
-        <span class="pill"><i class="devicon-spring-plain"></i> Spring Boot</span>
-        <span class="pill"><i class="bi bi-diagram-3-fill"></i> Microservices</span>
-        <span class="pill"><i class="bi bi-shield-check"></i> Spring Security & JWT</span>
-        <span class="pill"><i class="devicon-react-original"></i> React.js / Angular</span>
-        <span class="pill"><i class="bi bi-stars"></i> Gemini AI</span>
-      </div>
-
-      <!-- CTA Action Buttons -->
-      <div class="hero-actions">
-        <a routerLink="/projects" class="btn-brand-primary">
-          <i class="bi bi-grid-fill"></i>
-          <span>View My Projects</span>
-        </a>
-        <a routerLink="/resume" class="btn-brand-secondary">
-          <i class="bi bi-file-earmark-pdf-fill"></i>
-          <span>Download Resume</span>
-        </a>
-        <a routerLink="/contact" class="btn-brand-secondary">
-          <i class="bi bi-chat-dots-fill"></i>
-          <span>Contact Me</span>
-        </a>
-      </div>
-
-      <!-- Quick Metrics Bar -->
-      <div class="hero-metrics">
-        <div class="metric-card">
-          <span class="metric-value">74.68%</span>
-          <span class="metric-label">CDAC PG-DAC</span>
+      <!-- Right: Portrait -->
+      <div class="hero-portrait-col">
+        <div class="portrait-card">
+          <img src="assets/passport.jpg" alt="Ganesh Parhad" class="portrait-image">
+          <div class="portrait-meta">
+            <span class="portrait-name">Ganesh Bhaskar Parhad</span>
+            <span class="portrait-loc"><i class="bi bi-geo-alt"></i> Maharashtra, India</span>
+          </div>
         </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-value">7.88</span>
-          <span class="metric-label">B.Tech CGPA</span>
-        </div>
-        <div class="metric-divider"></div>
-        <div class="metric-card">
-          <span class="metric-value">4+</span>
-          <span class="metric-label">Certifications</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hero Illustration / Graphic -->
-    <div class="hero-visual">
-      <div class="visual-glow"></div>
-      <div class="code-card">
-        <div class="code-card-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="file-name">DeveloperProfile.java</span>
-        </div>
-        <pre class="code-snippet"><code><span class="kwd">public class</span> <span class="cls">GaneshParhad</span> &#123;
-  <span class="kwd">private String</span> role = <span class="str">"Java Backend / FullStack"</span>;
-  <span class="kwd">private String</span> education = <span class="str">"CDAC PG-DAC & B.Tech AI"</span>;
-  <span class="kwd">private String[]</span> stack = &#123;
-    <span class="str">"Spring Boot"</span>, <span class="str">"Microservices"</span>,
-    <span class="str">"Spring Security"</span>, <span class="str">"MySQL"</span>,
-    <span class="str">"React.js"</span>, <span class="str">"Gemini AI"</span>
-  &#125;;
-
-  <span class="kwd">public void</span> <span class="fn">buildScalableSystems</span>() &#123;
-    System.out.<span class="fn">println</span>(<span class="str">"Shipping high-performance APIs!"</span>);
-  &#125;
-&#125;</code></pre>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About & Education Section -->
+<!-- About & Timeline Section -->
 <app-my></app-my>

@@ -1,34 +1,25 @@
 <div class="skills-page">
   <div class="section-container">
-    <!-- Header -->
     <div class="section-header">
-      <span class="section-badge"><i class="bi bi-cpu-fill"></i> Technical Expertise</span>
-      <h1 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h1>
+      <span class="section-label">Competencies</span>
+      <h1 class="section-title">Technical Skills</h1>
       <p class="section-subtitle">
-        A structured breakdown of my enterprise Java backend proficiencies, modern frontend tools, and AI integrations.
+        Languages, enterprise frameworks, database technologies, and developer tooling used across my projects.
       </p>
     </div>
 
-    <!-- Skills Category Sections -->
-    <div class="skills-categories-grid">
-      <div *ngFor="let category of skillCategories" class="category-card glass-card">
-        <div class="category-header">
-          <div class="category-icon-wrapper">
-            <i [class]="category.icon"></i>
-          </div>
-          <h2 class="category-title">{{ category.title }}</h2>
+    <div class="skills-grid">
+      <div *ngFor="let category of skillCategories" class="skills-group card-clean">
+        <div class="group-header">
+          <i [class]="category.icon" class="group-icon"></i>
+          <h2 class="group-title">{{ category.title }}</h2>
         </div>
 
-        <div class="skills-items-grid">
-          <div *ngFor="let skill of category.skills" class="skill-item">
-            <div class="skill-icon-box">
-              <i *ngIf="skill.isBootstrapIcon" [class]="skill.iconClass"></i>
-              <i *ngIf="!skill.isBootstrapIcon" [class]="skill.iconClass"></i>
-            </div>
-            <div class="skill-info">
-              <span class="skill-name">{{ skill.name }}</span>
-              <span class="skill-level">{{ skill.level }}</span>
-            </div>
+        <div class="skills-pill-wrap">
+          <div *ngFor="let skill of category.skills" class="skill-chip">
+            <i [class]="skill.iconClass" class="skill-icon"></i>
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-tier">{{ skill.level }}</span>
           </div>
         </div>
       </div>

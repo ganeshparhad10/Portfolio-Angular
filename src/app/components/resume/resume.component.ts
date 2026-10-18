@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
+  viewMode: 'digital' | 'pdf' = 'digital';
 
+  setViewMode(mode: 'digital' | 'pdf'): void {
+    this.viewMode = mode;
+  }
+
+  printResume(): void {
+    window.print();
+  }
 }

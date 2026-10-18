@@ -1,269 +1,345 @@
-<div class="resume-page">
-  <div class="section-container">
-    <!-- Page Header & Action Controls -->
-    <div class="resume-top-header">
-      <div>
-        <span class="section-label">Curriculum Vitae</span>
-        <h1 class="section-title">Resume</h1>
-        <p class="section-subtitle">
-          Comprehensive overview of education, technical competencies, engineering projects, and credentials.
-        </p>
+<div class="resume-wrapper bg-[#0A0A0B] bg-artistic-grid py-12 px-3 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <!-- Top Action Toolbar (matching reference header controls) -->
+    <div class="resume-top-bar flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-white/10">
+      <div class="flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-wider font-bold">
+        <i class="bi bi-file-earmark-code text-cyan-500 fs-5"></i>
+        <span>OFFICIAL CV // GANESH BHASKAR PARHAD</span>
       </div>
 
-      <!-- Action Toolbar -->
-      <div class="resume-toolbar">
-        <div class="view-toggle">
-          <button
-            type="button"
-            class="toggle-btn"
-            [class.active]="viewMode === 'digital'"
-            (click)="setViewMode('digital')">
-            <i class="bi bi-file-earmark-person"></i>
-            <span>Interactive View</span>
-          </button>
-          <button
-            type="button"
-            class="toggle-btn"
-            [class.active]="viewMode === 'pdf'"
-            (click)="setViewMode('pdf')">
-            <i class="bi bi-file-pdf"></i>
-            <span>PDF Preview</span>
-          </button>
-        </div>
+      <div class="flex items-center flex-wrap gap-2">
+        <!-- View Toggle -->
+        <button
+          type="button"
+          (click)="setViewMode('sheet')"
+          [class.active]="viewMode === 'sheet'"
+          class="btn-mode-toggle">
+          <i class="bi bi-window"></i>
+          <span>Document View</span>
+        </button>
 
-        <div class="action-buttons">
-          <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-primary-clean">
-            <i class="bi bi-download"></i>
-            <span>Download PDF</span>
-            <span class="btn-subtext">5.5 KB</span>
-          </a>
-          <a href="assets/Ganesh-Parhad.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-clean" title="Open in New Tab">
-            <i class="bi bi-box-arrow-up-right"></i>
-          </a>
-          <button type="button" (click)="printResume()" class="btn-secondary-clean d-none d-md-inline-flex" title="Print Resume">
-            <i class="bi bi-printer"></i>
-          </button>
-        </div>
-      </div>
-    </div>
+        <button
+          type="button"
+          (click)="setViewMode('pdf')"
+          [class.active]="viewMode === 'pdf'"
+          class="btn-mode-toggle">
+          <i class="bi bi-file-pdf"></i>
+          <span>PDF Preview</span>
+        </button>
 
-    <!-- VIEW 1: Digital Interactive Resume Document -->
-    <div *ngIf="viewMode === 'digital'" class="digital-resume-sheet">
-      <!-- Resume Sheet Header -->
-      <header class="sheet-header">
-        <div class="sheet-identity">
-          <h2 class="sheet-name">GANESH BHASKAR PARHAD</h2>
-          <p class="sheet-role">Java Backend & Full-Stack Developer</p>
-        </div>
+        <!-- Print Action -->
+        <button
+          type="button"
+          (click)="printResume()"
+          class="btn-toolbar-secondary"
+          title="Print formatted document">
+          <i class="bi bi-printer text-cyan-400"></i>
+          <span>Print CV</span>
+        </button>
 
-        <div class="sheet-contacts">
-          <div class="contact-line">
-            <i class="bi bi-telephone"></i>
-            <a href="tel:+918421028276">+91 8421028276</a>
-          </div>
-          <div class="contact-line">
-            <i class="bi bi-envelope"></i>
-            <a href="mailto:ganeshparhad42@gmail.com">ganeshparhad42@gmail.com</a>
-          </div>
-          <div class="contact-line">
-            <i class="bi bi-geo-alt"></i>
-            <span>Chikhli, Maharashtra - 443201, India</span>
-          </div>
-          <div class="contact-line">
-            <i class="bi bi-linkedin"></i>
-            <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a" target="_blank" rel="noopener noreferrer">linkedin.com/in/ganesh-parhad-b77b9225a</a>
-          </div>
-          <div class="contact-line">
-            <i class="bi bi-github"></i>
-            <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer">github.com/ganeshparhad10</a>
-          </div>
-        </div>
-      </header>
-
-      <!-- Section: Professional Summary -->
-      <section class="sheet-section">
-        <h3 class="sheet-heading">Professional Summary</h3>
-        <p class="sheet-text">
-          CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence and Data Science, specializing in Java Backend Development. 
-          Hands-on experience in developing RESTful APIs and microservices-based applications using Java, Spring Boot, Spring Security, and MySQL. 
-          Familiar with JWT authentication, React.js integration, and Generative AI integration using the Gemini API. 
-          Strong understanding of Object-Oriented Programming, DBMS, SQL, and backend application development.
-        </p>
-      </section>
-
-      <!-- Section: Education -->
-      <section class="sheet-section">
-        <h3 class="sheet-heading">Education</h3>
-        
-        <div class="sheet-item">
-          <div class="sheet-item-header">
-            <div>
-              <strong class="item-title">CDAC (Know It)</strong>
-              <div class="item-subtitle">Postgraduation Certification in Advanced Computing</div>
-            </div>
-            <div class="item-meta">
-              <span class="item-date">2026</span>
-              <span class="item-score">Grade: 74.68%</span>
-              <span class="item-loc">Pune, India</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sheet-item">
-          <div class="sheet-item-header">
-            <div>
-              <strong class="item-title">CSMSS Chh. Shahu College of Engineering</strong>
-              <div class="item-subtitle">Bachelor of Technology in Artificial Intelligence and Data Science</div>
-            </div>
-            <div class="item-meta">
-              <span class="item-date">2021 – 2025</span>
-              <span class="item-score">CGPA: 7.88</span>
-              <span class="item-loc">Aurangabad, India</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sheet-item">
-          <div class="sheet-item-header">
-            <div>
-              <strong class="item-title">Janata Mahavidyalaya</strong>
-              <div class="item-subtitle">Higher Secondary Certificate (HSC) Maharashtra State Board</div>
-            </div>
-            <div class="item-meta">
-              <span class="item-date">2021</span>
-              <span class="item-score">Grade: 89%</span>
-              <span class="item-loc">Chandrapur, India</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Technical Skills -->
-      <section class="sheet-section">
-        <h3 class="sheet-heading">Technical Skills</h3>
-        <div class="sheet-skills-grid">
-          <div class="skill-row">
-            <span class="skill-label">Programming Languages:</span>
-            <span class="skill-value">Java, SQL, JavaScript, Python</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-label">Database Systems:</span>
-            <span class="skill-value">MySQL, Relational DBMS</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-label">Java Technologies:</span>
-            <span class="skill-value">Core Java, Spring, Spring Boot, Spring Security, Hibernate, Spring Data JPA</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-label">Frontend Technologies:</span>
-            <span class="skill-value">HTML5, CSS3, JavaScript, React.js, Angular</span>
-          </div>
-          <div class="skill-row">
-            <span class="skill-label">Tools & Platforms:</span>
-            <span class="skill-value">Git, GitHub, Maven, Postman, VS Code, Spring Tool Suite</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Projects -->
-      <section class="sheet-section">
-        <h3 class="sheet-heading">Engineering Projects</h3>
-
-        <!-- WorkPlus -->
-        <div class="sheet-project">
-          <div class="project-top-row">
-            <div>
-              <strong class="item-title">WorkPlus – Workforce Management Platform</strong>
-              <div class="project-tools">
-                Tools: Java, Spring Boot, REST API, Microservices, React.js, MySQL, Spring Security, JWT, Generative AI (Gemini), Git/GitHub
-              </div>
-            </div>
-            <div class="project-meta-right">
-              <span class="item-date">Aug 2026</span>
-              <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" class="link-code">
-                <i class="bi bi-github"></i> Repository
-              </a>
-            </div>
-          </div>
-          <ul class="sheet-bullets">
-            <li>Developed a role-based workforce management platform supporting Admin, HR Head, Manager, and Employee roles for project management, task allocation, attendance, and timesheet workflows.</li>
-            <li>Developed RESTful APIs using Spring Boot and Microservices architecture, separating authentication, business operations, transactions, and AI assistant modules.</li>
-            <li>Implemented secure authentication using Spring Security, JWT, BCrypt password hashing, and role-based authorization.</li>
-            <li>Integrated MySQL with Spring Data JPA and Hibernate to manage users, projects, employee assignments, tasks, attendance, and timesheet records.</li>
-            <li>Integrated a Generative AI assistant using Gemini API to answer employee task-related queries using authenticated employee task data.</li>
-            <li>Developed React.js dashboards and integrated backend services through REST APIs.</li>
-          </ul>
-        </div>
-
-        <!-- EduTrack -->
-        <div class="sheet-project">
-          <div class="project-top-row">
-            <div>
-              <strong class="item-title">EduTrack: Education-Focused Attendance Tracker</strong>
-              <div class="project-tools">
-                Tools: Spring Boot, Java, Hibernate, MySQL, Angular
-              </div>
-            </div>
-            <div class="project-meta-right">
-              <span class="item-date">Jan 2025</span>
-              <a href="https://github.com/ganeshparhad10/EduTrack" target="_blank" rel="noopener noreferrer" class="link-code">
-                <i class="bi bi-github"></i> Repository
-              </a>
-            </div>
-          </div>
-          <ul class="sheet-bullets">
-            <li>Developed RESTful APIs to manage students, subjects, faculty, and attendance records.</li>
-            <li>Implemented CRUD operations for attendance management and maintained structured, transactional data access.</li>
-            <li>Implemented role-based access for Admin and Faculty to secure application operations.</li>
-            <li>Designed entity relationships between Students, Subjects, and Faculty using Hibernate annotations.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Section: Certifications -->
-      <section class="sheet-section">
-        <h3 class="sheet-heading">Certifications</h3>
-        <div class="sheet-certs-grid">
-          <div class="cert-entry">
-            <strong>NPTEL Programming in Java</strong>
-            <span>IIT Kharagpur</span>
-          </div>
-          <div class="cert-entry">
-            <strong>Fundamentals of Deep Learning</strong>
-            <span>NVIDIA</span>
-          </div>
-          <div class="cert-entry">
-            <strong>NPTEL - Joy of Computing using Python</strong>
-            <span>IIT Madras</span>
-          </div>
-          <div class="cert-entry">
-            <strong>HTML 5</strong>
-            <span>Infosys | Springboard</span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- VIEW 2: PDF Document View -->
-    <div *ngIf="viewMode === 'pdf'" class="pdf-viewer-card card-clean">
-      <div class="pdf-viewer-header">
-        <div class="pdf-info">
-          <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
-          <span>Ganesh-Parhad.pdf</span>
-        </div>
-        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-primary-clean btn-sm">
-          <i class="bi bi-download"></i> Download
+        <!-- Download Action -->
+        <a
+          href="assets/Ganesh-Parhad.pdf"
+          download="Ganesh_Parhad_Resume.pdf"
+          class="btn-toolbar-cyan"
+          title="Download official PDF resume">
+          <i class="bi bi-download"></i>
+          <span>DOWNLOAD RESUME</span>
         </a>
       </div>
+    </div>
 
-      <div class="pdf-frame-wrapper">
-        <iframe
-          src="assets/Ganesh-Parhad.pdf"
-          title="Ganesh Parhad Resume PDF"
-          width="100%"
-          height="1000px">
-        </iframe>
+    <!-- DOCUMENT VIEW: Styled matching abhishek-g-mu.vercel.app -->
+    <div *ngIf="viewMode === 'sheet'" class="resume-container-outer bg-[#141416] border border-cyan-500/80 p-3 sm:p-6 md:p-8 shadow-2xl">
+      <div class="resume-sheet bg-[#0A0A0B] p-4 sm:p-6 md:p-8 lg:p-10 border border-white/10 font-sans space-y-6 text-gray-300">
+        
+        <!-- Sheet Header with Photo & Contacts -->
+        <div class="border-b-2 border-cyan-500 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-5">
+          <div class="flex items-start gap-4">
+            <!-- Profile Photo Box with Cyan Border -->
+            <div class="avatar-frame relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 border-2 border-cyan-500/80 bg-[#141416] overflow-hidden">
+              <img src="assets/passport.jpg" alt="Ganesh Bhaskar Parhad" class="w-full h-full object-cover object-top">
+            </div>
+
+            <div>
+              <h1 class="font-tech-heading text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase tracking-wider">
+                GANESH BHASKAR PARHAD
+              </h1>
+              <p class="font-mono text-xs sm:text-sm text-cyan-400 font-bold tracking-wide mt-0.5">
+                Java Backend Developer / Full-Stack Engineer
+              </p>
+              <p class="text-[11px] sm:text-xs font-mono text-gray-400 mt-1 font-light">
+                CDAC PG-DAC Graduate (74.68%) • B.Tech AI & Data Science (7.88 CGPA)
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Details on Right -->
+          <div class="text-[11px] sm:text-xs font-mono text-gray-400 space-y-1 md:text-right font-light pt-2 md:pt-0 border-t md:border-t-0 border-white/10">
+            <div class="flex items-center md:justify-end gap-1.5">
+              <span class="text-gray-500">Phone:</span>
+              <a href="tel:+918421028276" class="text-white hover:text-cyan-400 transition-colors">+91-8421028276</a>
+            </div>
+            <div class="flex items-center md:justify-end gap-1.5 break-all">
+              <span class="text-gray-500">Email:</span>
+              <a href="mailto:ganeshparhad42@gmail.com" class="text-white hover:text-cyan-400 transition-colors">ganeshparhad42@gmail.com</a>
+            </div>
+            <div class="flex items-center md:justify-end gap-1.5">
+              <span class="text-gray-500">Location:</span>
+              <span class="text-gray-200">Chikhli, Maharashtra - 443201, India</span>
+            </div>
+            <div class="flex items-center md:justify-end gap-1.5 break-all">
+              <span class="text-gray-500">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/ganesh-parhad-b77b9225a" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                ganesh-parhad <i class="bi bi-box-arrow-up-right text-[10px]"></i>
+              </a>
+            </div>
+            <div class="flex items-center md:justify-end gap-1.5 break-all">
+              <span class="text-gray-500">GitHub:</span>
+              <a href="https://github.com/ganeshparhad10" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">
+                ganeshparhad10 <i class="bi bi-box-arrow-up-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 1: Professional Objective / Summary -->
+        <div>
+          <h2 class="font-mono text-xs uppercase tracking-widest text-cyan-400 font-bold border-b border-white/10 pb-1 mb-2">
+            PROFESSIONAL SUMMARY
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-200 leading-relaxed italic bg-[#141416] p-3 sm:p-4 border-l-2 border-cyan-500 font-light">
+            "CDAC PG-DAC graduate with a B.Tech in Artificial Intelligence and Data Science, specializing in Java Backend Development. 
+            Hands-on experience in developing RESTful APIs and microservices-based applications using Java, Spring Boot, Spring Security, and MySQL. 
+            Familiar with JWT authentication, React.js integration, and Generative AI integration using the Gemini API. 
+            Strong understanding of Object-Oriented Programming, DBMS, SQL, and backend application development."
+          </p>
+        </div>
+
+        <!-- Section 2: Education -->
+        <div>
+          <h2 class="font-mono text-xs uppercase tracking-widest text-cyan-400 font-bold border-b border-white/10 pb-1 mb-3">
+            EDUCATION
+          </h2>
+          <div class="space-y-3 font-mono text-xs">
+            <!-- CDAC -->
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1 gap-1">
+                <span class="text-sm">CDAC (KNOW IT) — PUNE, INDIA</span>
+                <span class="text-cyan-400 font-bold text-xs">2026</span>
+              </div>
+              <div class="text-gray-300 font-light">
+                Postgraduation Certification in Advanced Computing (PG-DAC)
+              </div>
+              <div class="text-[11px] text-cyan-400 mt-1">
+                Grade: 74.68%
+              </div>
+            </div>
+
+            <!-- B.Tech -->
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1 gap-1">
+                <span class="text-sm">CSMSS CHH. SHAHU COLLEGE OF ENGINEERING — AURANGABAD</span>
+                <span class="text-cyan-400 font-bold text-xs">2021 – 2025</span>
+              </div>
+              <div class="text-gray-300 font-light">
+                Bachelor of Technology in Artificial Intelligence and Data Science
+              </div>
+              <div class="text-[11px] text-cyan-400 mt-1">
+                CGPA: 7.88
+              </div>
+            </div>
+
+            <!-- HSC -->
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1 gap-1">
+                <span class="text-sm">JANATA MAHAVIDYALAYA — CHANDRAPUR</span>
+                <span class="text-cyan-400 font-bold text-xs">2021</span>
+              </div>
+              <div class="text-gray-300 font-light">
+                Higher Secondary Certificate (HSC) Maharashtra State Board
+              </div>
+              <div class="text-[11px] text-cyan-400 mt-1">
+                Grade: 89%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Technical Skills & Workflows -->
+        <div>
+          <h2 class="font-mono text-xs uppercase tracking-widest text-cyan-400 font-bold border-b border-white/10 pb-1 mb-3">
+            TECHNICAL SKILLS & WORKFLOWS
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+            <div class="p-3 bg-[#141416] border border-white/10">
+              <span class="text-cyan-400 font-semibold block mb-1">PROGRAMMING LANGUAGES</span>
+              <span class="text-gray-300 font-light leading-relaxed">Java, SQL, JavaScript, Python</span>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10">
+              <span class="text-cyan-400 font-semibold block mb-1">JAVA TECHNOLOGIES</span>
+              <span class="text-gray-300 font-light leading-relaxed">Core Java, Spring, Spring Boot, Spring Security, Hibernate, JPA</span>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10">
+              <span class="text-cyan-400 font-semibold block mb-1">DATABASE SYSTEMS</span>
+              <span class="text-gray-300 font-light leading-relaxed">MySQL, Relational DBMS, Schema Design, SQL Queries</span>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10">
+              <span class="text-cyan-400 font-semibold block mb-1">FRONTEND TECHNOLOGIES</span>
+              <span class="text-gray-300 font-light leading-relaxed">HTML5, CSS3, JavaScript, React.js, Angular, Bootstrap</span>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10">
+              <span class="text-cyan-400 font-semibold block mb-1">AI & INTEGRATIONS</span>
+              <span class="text-gray-300 font-light leading-relaxed">Google Gemini API, Generative AI, Natural Language Processing</span>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10">
+              <span class="text-cyan-400 font-semibold block mb-1">TOOLS & PLATFORMS</span>
+              <span class="text-gray-300 font-light leading-relaxed">Git, GitHub, Maven, Postman, VS Code, Spring Tool Suite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Projects -->
+        <div>
+          <h2 class="font-mono text-xs uppercase tracking-widest text-cyan-400 font-bold border-b border-white/10 pb-1 mb-3">
+            ENGINEERING PROJECTS
+          </h2>
+          <div class="space-y-4 text-xs font-mono">
+            <!-- Project 1: WorkPlus -->
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1.5 gap-1">
+                <span class="text-sm">WorkPlus – Workforce Management Platform</span>
+                <span class="text-cyan-400 font-normal text-[11px] px-2 py-0.5 bg-[#0A0A0B] border border-white/10 w-fit">
+                  Aug 2026
+                </span>
+              </div>
+              <div class="text-[11px] text-cyan-400 mb-2 font-light">
+                Tools: [Java, Spring Boot, REST API, Microservices, React.js, MySQL, Spring Security, JWT, Generative AI, Git/GitHub]
+              </div>
+              <ul class="space-y-1.5 text-gray-300 font-sans pt-1">
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Developed a role-based workforce management platform supporting Admin, HR Head, Manager, and Employee roles for project management, task allocation, attendance, and timesheet workflows.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Developed RESTful APIs using Spring Boot and Microservices architecture, separating authentication, business operations, transactions, and AI assistant modules.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Implemented secure authentication using Spring Security, JWT, BCrypt password hashing, and role-based authorization.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Integrated MySQL with Spring Data JPA and Hibernate to manage users, projects, employee assignments, tasks, attendance, and timesheet records.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Integrated a Generative AI assistant using Gemini API to answer employee task-related queries using authenticated employee task data.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Developed React.js dashboards and integrated backend services through REST APIs.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Project 2: EduTrack -->
+            <div class="p-3 sm:p-4 bg-[#141416] border border-white/10">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between text-white font-bold mb-1.5 gap-1">
+                <span class="text-sm">EduTrack: Education-Focused Attendance Tracker</span>
+                <span class="text-cyan-400 font-normal text-[11px] px-2 py-0.5 bg-[#0A0A0B] border border-white/10 w-fit">
+                  Jan 2025
+                </span>
+              </div>
+              <div class="text-[11px] text-cyan-400 mb-2 font-light">
+                Tools: [Spring Boot, Java, Hibernate, MySQL, Angular]
+              </div>
+              <ul class="space-y-1.5 text-gray-300 font-sans pt-1">
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Developed RESTful APIs to manage students, subjects, faculty, and attendance records.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Implemented CRUD operations for attendance management and maintained structured, transactional data access.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Implemented role-based access for Admin and Faculty to secure application operations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+                  <span class="leading-relaxed font-light">Designed entity relationships between Students, Subjects, and Faculty using Hibernate annotations.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5: Certifications -->
+        <div>
+          <h2 class="font-mono text-xs uppercase tracking-widest text-cyan-400 font-bold border-b border-white/10 pb-1 mb-3">
+            CERTIFICATIONS
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+              <div>
+                <strong class="text-white block font-bold">NPTEL Programming in Java</strong>
+                <span class="text-gray-400 font-light">IIT Kharagpur</span>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+              <div>
+                <strong class="text-white block font-bold">Fundamentals of Deep Learning</strong>
+                <span class="text-gray-400 font-light">NVIDIA</span>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+              <div>
+                <strong class="text-white block font-bold">NPTEL - Joy of Computing using Python</strong>
+                <span class="text-gray-400 font-light">IIT Madras</span>
+              </div>
+            </div>
+
+            <div class="p-3 bg-[#141416] border border-white/10 flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 shrink-0"></span>
+              <div>
+                <strong class="text-white block font-bold">HTML 5 Developer Certification</strong>
+                <span class="text-gray-400 font-light">Infosys | Springboard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </div>
+
+    <!-- PDF PREVIEW VIEW -->
+    <div *ngIf="viewMode === 'pdf'" class="pdf-card bg-[#141416] border border-cyan-500/80 p-3 sm:p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
+        <span class="text-xs font-mono text-cyan-400 font-bold uppercase">PDF Document Preview</span>
+        <a href="assets/Ganesh-Parhad.pdf" download="Ganesh_Parhad_Resume.pdf" class="btn-toolbar-cyan text-xs">
+          <i class="bi bi-download"></i> Download File
+        </a>
+      </div>
+      <iframe
+        src="assets/Ganesh-Parhad.pdf"
+        title="Ganesh Parhad Resume"
+        width="100%"
+        height="950px"
+        class="border border-white/10 bg-white">
+      </iframe>
     </div>
   </div>
 </div>

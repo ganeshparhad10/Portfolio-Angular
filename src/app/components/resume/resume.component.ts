@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
-  viewMode: 'digital' | 'pdf' = 'digital';
+  viewMode: 'sheet' | 'pdf' = 'sheet';
 
-  setViewMode(mode: 'digital' | 'pdf'): void {
+  setViewMode(mode: 'sheet' | 'pdf'): void {
     this.viewMode = mode;
   }
 
